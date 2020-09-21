@@ -24,7 +24,6 @@
   --white: #fff;
   --black: #000;
 
-  --grey-500: #fafafa;
   --grey-100: #f4f4f4;
   --grey-200: #e4e4e6;
   --grey-300: #e2e8f0;
@@ -37,14 +36,18 @@
 
   --blue-50: #e3f2fd;
   --blue-100: #bbdefb;
-  /* --blue-200: #90caf9; */
-  /* --blue-300: #64b5f6; */
-  /* --blue-400: #42a5f5; */
   --blue-500: #2196f3;
   --blue-600: #1e88e5;
   --blue-700: #1976d2;
   --blue-800: #1565c0;
-  /* --blue-900: #0d47a1; */
+
+  --yellow-300: #faf089;
+
+  --green-50: #e8f5e9;
+  --green-900: #1b5e20;
+
+  --red-50: #ffebee;
+  --red-900: #b71c1c;
 
   --sans-font-family: system-ui, -apple-system, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
@@ -374,7 +377,11 @@ dt + dd {
 /* Badges
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 code,
-kbd {
+kbd,
+mark,
+ins,
+del,
+samp {
   padding: 0.2rem 0.5rem;
   margin: 0 0.2rem;
   font-size: 85%;
@@ -384,14 +391,34 @@ kbd {
   font-family: var(--mono-font-family);
 }
 
+code {
+  color: var(--grey-100);
+  background-color: var(--grey-700);
+}
+
 kbd {
   color: var(--blue-700);
   background-color: var(--blue-50);
 }
 
-code {
-  color: var(--grey-100);
-  background-color: var(--grey-700);
+mark {
+  color: var(--grey-900);
+  background-color: var(--yellow-300);
+}
+
+ins {
+  color: var(--green-900);
+  background-color: var(--green-50);
+}
+
+del {
+  color: var(--red-900);
+  background-color: var(--red-50);
+}
+
+samp {
+  color: var(--grey-900);
+  background-color: var(--grey-100);
 }
 
 pre {
