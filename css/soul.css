@@ -52,7 +52,6 @@
   --sans-font-family: system-ui, -apple-system, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-
   --mono-font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
     'Courier New', monospace;
 }
@@ -65,13 +64,9 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 *::before,
 *::after {
   box-sizing: border-box;
-  transition: all 0.125s;
 }
 
-html {
-  font-size: 10px;
-}
-
+html,
 input {
   font-size: 10px;
 }
@@ -153,6 +148,7 @@ h6 {
 
 p {
   margin-top: 0;
+  margin-bottom: 2.4rem;
 }
 
 var {
@@ -165,6 +161,7 @@ strong,
 b {
   color: var(--grey-900);
 }
+
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button {
@@ -184,7 +181,6 @@ button {
   cursor: pointer;
   margin-bottom: 1.2rem;
 }
-
 button:hover,
 button:focus {
   color: var(--grey-900);
@@ -197,13 +193,13 @@ button[type='submit'] {
   background-color: var(--blue-800);
   border-color: var(--blue-800);
 }
-
 button[type='submit']:hover,
 button[type='submit']:focus {
   color: #fff;
   background-color: var(--blue-700);
   border-color: var(--blue-700);
 }
+
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 input:not([type='checkbox']):not([type='radio']):not([type='range']),
@@ -224,7 +220,6 @@ select {
   box-sizing: border-box;
   width: 100%;
 }
-
 textarea,
 select[multiple] {
   min-height: 7.2rem;
@@ -232,7 +227,6 @@ select[multiple] {
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
 }
-
 input:not([type='checkbox']):not([type='radio']):not([type='range']):hover,
 input[type='checkbox']:hover,
 input[type='radio']:hover,
@@ -240,7 +234,6 @@ textarea:hover,
 select:hover {
   border: 1px solid var(--grey-500);
 }
-
 input:not([type='checkbox']):not([type='radio']):not([type='range']):focus,
 input[type='checkbox']:focus,
 input[type='radio']:focus,
@@ -250,12 +243,6 @@ select:focus {
   box-shadow: 0 0 0 3px var(--blue-100);
   outline: 0;
 }
-
-input[type='checkbox'],
-input[type='radio'] {
-  display: inline;
-}
-
 select:not([multiple]) {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath d='M10.193 3.97a.75.75 0 0 1 1.062 1.062L6.53 9.756a.75.75 0 0 1-1.06 0L.745 5.032A.75.75 0 0 1 1.807 3.97L6 8.163l4.193-4.193z' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
   background-position: calc(100% - 1.6rem) center;
@@ -274,20 +261,16 @@ input[type='radio'] {
   cursor: pointer;
   position: relative;
 }
-
 input[type='checkbox']:hover,
 input[type='radio']:hover {
   border: 1px solid var(--grey-600);
 }
-
 input[type='checkbox'] {
   border-radius: 3px;
 }
-
 input[type='radio'] {
   border-radius: 50%;
 }
-
 input[type='radio']:before {
   content: '';
   width: 0.8rem;
@@ -298,7 +281,6 @@ input[type='radio']:before {
   left: 3px;
   border-radius: 50%;
 }
-
 input[type='checkbox']:before {
   content: '';
   width: 1.2rem;
@@ -310,13 +292,11 @@ input[type='checkbox']:before {
   top: 2px;
   left: 1px;
 }
-
 input[type='checkbox']:checked,
 input[type='radio']:checked {
   background-color: var(--blue-500);
   border: 1px solid var(--blue-500);
 }
-
 input[type='checkbox']:checked:hover,
 input[type='radio']:checked:hover {
   background-color: var(--blue-600);
@@ -329,13 +309,21 @@ legend {
   margin-bottom: 0.4rem;
 }
 
+form {
+  margin-bottom: 2.4rem;
+}
 fieldset {
   border: 1px solid var(--grey-400);
   border-radius: 0.6rem;
   margin: 0;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.6rem;
   padding: 0.8rem 1.6rem;
 }
+form fieldset,
+fieldset form {
+  margin-bottom: 0;
+}
+
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
@@ -348,6 +336,7 @@ ol,
 ul {
   padding-left: 0;
   margin-top: 0;
+  margin-bottom: 2.4rem;
 }
 ul ul,
 ul ol,
@@ -366,15 +355,15 @@ dl {
   margin: 0;
   padding: 0.8rem 1.2rem;
 }
-
 dl:not(:last-of-type) {
   border-bottom: 1px solid var(--grey-300);
 }
-
+dl:last-of-type {
+  margin-bottom: 2.4rem;
+}
 dd {
   text-align: right;
 }
-
 dt + dd {
   margin-left: 0.8rem;
 }
@@ -400,27 +389,22 @@ code {
   color: var(--grey-100);
   background-color: var(--grey-700);
 }
-
 kbd {
   color: var(--blue-700);
   background-color: var(--blue-50);
 }
-
 mark {
   color: var(--grey-900);
   background-color: var(--yellow-300);
 }
-
 ins {
   color: var(--green-900);
   background-color: var(--green-50);
 }
-
 del {
   color: var(--red-900);
   background-color: var(--red-50);
 }
-
 samp {
   color: var(--grey-900);
   background-color: var(--grey-100);
@@ -428,8 +412,8 @@ samp {
 
 pre {
   overflow: auto;
+  margin-bottom: 2.4rem;
 }
-
 pre > kbd,
 pre > code {
   display: block;
@@ -453,7 +437,6 @@ nav {
   overflow: auto;
   max-width: 100%;
 }
-
 nav a {
   display: inline-flex;
   height: 3.8rem;
@@ -470,13 +453,11 @@ nav a {
   cursor: pointer;
   box-sizing: border-box;
 }
-
 nav a:hover,
 nav a:focus,
 nav a:visited {
   background-color: var(--grey-100);
 }
-
 nav a:hover,
 nav a:focus {
   background-color: var(--grey-100);
@@ -488,12 +469,17 @@ nav a:focus {
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 2.4rem;
 }
 th,
 td {
   padding: 0.6rem 1.2rem;
   text-align: left;
   border-bottom: 1px solid var(--grey-300);
+}
+th {
+  color: var(--grey-700);
+  font-weight: 600;
 }
 th:first-child,
 td:first-child {
@@ -504,29 +490,7 @@ td:last-child {
   padding-right: 0;
 }
 
-th {
-  color: var(--grey-700);
-  font-weight: 600;
-}
-
-/* Spacing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-fieldset {
-  margin-bottom: 1.6rem;
-}
-pre,
-blockquote,
-figure,
-table,
-p,
-ul,
-ol,
-form {
-  margin-bottom: 2.4rem;
-}
-
-/* Misc
+/* Hr
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
   margin-top: 3.2rem;
@@ -535,38 +499,57 @@ hr {
   border-top: 1px solid var(--grey-300);
 }
 
-blockquote {
+/* Quotes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+blockquote,
+q {
   border-left: 3px solid var(--grey-300);
   margin-left: 0;
   margin-right: 0;
   padding-left: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+cite {
+  display: block;
+  font-style: italic;
+  color: var(--grey-600);
 }
 
+/* Images
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+figure {
+  margin: 0 0 2.4rem 0;
+}
 img {
   max-width: 100%;
 }
+figcaption {
+  font-style: italic;
+  color: var(--grey-700);
+}
 
+/* Header & footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 header,
 footer {
   padding: 0.8rem 0;
 }
-
 header {
   border-bottom: 1px solid var(--grey-300);
   margin-bottom: 2.4rem;
 }
-
 footer {
   border-top: 1px solid var(--grey-300);
   margin-top: 2.4rem;
 }
-
 header > *,
 footer > * {
   margin-top: 0;
   margin-bottom: 0;
 }
 
+/* Details & summary
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 details {
   display: flex;
   flex-direction: column;
@@ -577,24 +560,19 @@ details {
   border-radius: 6px;
   overflow: hidden;
 }
-
 details:focus-within {
   box-shadow: 0 0 0 3px var(--blue-100);
   outline: none;
 }
-
 details:hover {
   border-color: var(--grey-400);
 }
-
 details[open] {
   padding: 1.2rem;
 }
-
 details > :last-child {
   margin-bottom: 0;
 }
-
 details[open] summary {
   margin-bottom: 1.2rem;
   border-bottom: 1px solid var(--grey-300);
@@ -606,73 +584,44 @@ summary {
   padding: 1.2rem;
   margin: -1.2rem -1.2rem 0;
 }
-
 summary:focus {
   outline: none;
 }
-
 details:hover summary {
   border-color: var(--grey-400);
 }
-
 details > :not(summary) {
   margin-top: 0;
 }
 
-summary::-webkit-details-marker {
-  color: var(--grey-700);
-}
-
+/* Print
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media print {
-  body,
-  pre,
-  code,
-  summary,
-  details,
-  button,
-  input,
-  textarea {
-    background-color: #fff;
+  *,
+  *:before,
+  *:after {
+    color: #000 !important;
+    background-color: #fff !important;
   }
 
-  button,
-  input,
-  textarea {
-    border: 1px solid #000;
+  main {
+    max-width: 100%;
+    padding: 0;
   }
 
-  body,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  s pre,
-  code,
+  nav {
+    white-space: initial;
+    overflow: initial;
+  }
+
   button,
   input,
   textarea,
-  footer,
-  summary,
-  strong {
-    color: #000;
-  }
-
-  summary::marker {
-    color: #000;
-  }
-
-  summary::-webkit-details-marker {
-    color: #000;
-  }
-
-  tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+  select {
+    border: 1px solid #000 !important;
   }
 
   a {
-    color: #00f;
-    text-decoration: underline;
+    color: #00f !important;
   }
 }
