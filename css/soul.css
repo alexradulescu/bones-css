@@ -623,27 +623,6 @@ summary::-webkit-details-marker {
   color: var(--grey-700);
 }
 
-/* Dialog
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-dialog {
-  max-width: 90%;
-  width: 46rem;
-  border-radius: 0.6rem;
-  border: 2px solid var(--grey-300);
-  padding: 2.4rem;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translatey(-50%);
-}
-
-/* Backdrop only comes when using showModal() function.
-Also doesn't support css variables*/
-dialog::backdrop {
-  background: #2f2e33;
-  opacity: 0.5;
-}
-
 @media print {
   body,
   pre,
