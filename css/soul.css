@@ -566,6 +566,45 @@ footer > * {
   margin-bottom: 0;
 }
 
+details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid var(--grey-300);
+  padding: 1.2rem 1.2rem 0;
+  margin: 1.2rem 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+details[open] {
+  padding: 1.2rem;
+}
+
+details > :last-child {
+  margin-bottom: 0;
+}
+
+details[open] summary {
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid var(--grey-300);
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+  padding: 1.2rem;
+  margin: -1.2rem -1.2rem 0;
+}
+
+details > :not(summary) {
+  margin-top: 0;
+}
+
+summary::-webkit-details-marker {
+  color: var(--grey-900);
+}
+
 @media print {
   body,
   pre,
