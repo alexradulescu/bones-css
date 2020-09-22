@@ -65,6 +65,7 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 *::before,
 *::after {
   box-sizing: border-box;
+  transition: all 0.125s;
 }
 
 html {
@@ -577,6 +578,15 @@ details {
   overflow: hidden;
 }
 
+details:focus-within {
+  box-shadow: 0 0 0 3px var(--blue-100);
+  outline: none;
+}
+
+details:hover {
+  border-color: var(--grey-400);
+}
+
 details[open] {
   padding: 1.2rem;
 }
@@ -597,12 +607,20 @@ summary {
   margin: -1.2rem -1.2rem 0;
 }
 
+summary:focus {
+  outline: none;
+}
+
+details:hover summary {
+  border-color: var(--grey-400);
+}
+
 details > :not(summary) {
   margin-top: 0;
 }
 
 summary::-webkit-details-marker {
-  color: var(--grey-900);
+  color: var(--grey-700);
 }
 
 @media print {
