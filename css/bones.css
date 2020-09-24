@@ -62,13 +62,14 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 *::after {
   box-sizing: border-box;
 }
-
-html,
-input {
+html {
   font-size: 10px;
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 body {
+  margin: 0;
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
@@ -188,6 +189,21 @@ button[type='submit']:focus {
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* 1. From normalize.css */
+input {
+  font-size: 10px; /* 1 */
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
 input:not([type='checkbox']):not([type='radio']):not([type='range']),
 textarea,
 select {
@@ -294,6 +310,7 @@ label:not([for]),
 legend {
   display: block;
   margin-bottom: 0.4rem;
+  padding: 0;
 }
 
 form {
