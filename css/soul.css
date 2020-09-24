@@ -149,14 +149,8 @@ p {
 }
 
 var {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-    'Courier New', monospace;
+  font-family: var(--mono-font-family);
   font-style: normal;
-}
-
-strong,
-b {
-  color: var(--grey-900);
 }
 
 /* Buttons
@@ -188,7 +182,6 @@ button[type='submit'] {
 }
 button[type='submit']:hover,
 button[type='submit']:focus {
-  color: #fff;
   background-color: var(--blue);
   border-color: var(--blue);
 }
