@@ -154,86 +154,85 @@
           other.
         </p>
         <form>
-          <label>
-            <span>Text Input</span>
-            <input type="text" placeholder="John James" />
-          </label>
-          <label>
-            <span>Email Input</span>
-            <input type="email" placeholder="john.james@mailbox.com" />
-          </label>
-          <label>
-            <span>Password Input</span>
-            <input type="password" placeholder="..." />
-          </label>
-          <label>
-            <span>Date Input</span>
-            <input type="date" />
-          </label>
-          <label>
-            <span>Month Input</span>
-            <input type="month" />
-          </label>
-          <label>
-            <span>Search Input</span>
-            <input type="search" placeholder="Search..." />
-          </label>
-          <label>
-            <span>Number Input</span>
-            <input type="number" placeholder="123234" />
-          </label>
-          <label>
-            <span>Datalist Input</span>
-            <input
-              list="browsers"
-              autocomplete="off"
-              placeholder="Choose a browser"
-            />
-            <datalist id="browsers">
-              <option value="Chrome"> </option>
-              <option value="Firefox"> </option>
-              <option value="Internet Explorer"> </option>
-              <option value="Opera"> </option>
-              <option value="Safari"> </option>
-              <option value="Microsoft Edge"> </option>
-            </datalist>
-          </label>
-          <label>
-            <span>Select</span>
-            <select>
-              <option value="Option 1">Nord</option>
-              <option value="Option 2">South</option>
-              <option value="Option 3">East</option>
-              <option value="Option 3">West</option>
-            </select>
-          </label>
-          <label>
-            <span>MultiSelect</span>
-            <select multiple>
-              <option value="Option 1">Nord</option>
-              <option value="Option 2">South</option>
-              <option value="Option 3">East</option>
-              <option value="Option 3">West</option>
-            </select>
-          </label>
-          <label>
-            <span>Textarea</span>
-            <textarea placeholder="Hi Dave …"></textarea>
-          </label>
-          <label>
-            <input type="checkbox" />
-            <span>Checkbox input</span>
-          </label>
-          <label>
-            <input type="radio" />
-            <span>Radio input</span>
-          </label>
-
-          <button type="submit">Submit</button>
-          <button>Cancel</button>
-
           <fieldset>
             <legend>A legend</legend>
+            <label>
+              <span>Text Input</span>
+              <input type="text" placeholder="John James" />
+            </label>
+            <label>
+              <span>Email Input</span>
+              <input type="email" placeholder="john.james@mailbox.com" />
+            </label>
+            <label>
+              <span>Password Input</span>
+              <input type="password" placeholder="..." />
+            </label>
+            <label>
+              <span>Date Input</span>
+              <input type="date" />
+            </label>
+            <label>
+              <span>Month Input</span>
+              <input type="month" />
+            </label>
+            <label>
+              <span>Search Input</span>
+              <input type="search" placeholder="Search..." />
+            </label>
+            <label>
+              <span>Number Input</span>
+              <input type="number" placeholder="123234" />
+            </label>
+            <label>
+              <span>Datalist Input</span>
+              <input
+                list="browsers"
+                autocomplete="off"
+                placeholder="Choose a browser"
+              />
+              <datalist id="browsers">
+                <option value="Chrome"> </option>
+                <option value="Firefox"> </option>
+                <option value="Internet Explorer"> </option>
+                <option value="Opera"> </option>
+                <option value="Safari"> </option>
+                <option value="Microsoft Edge"> </option>
+              </datalist>
+            </label>
+            <label>
+              <span>Select</span>
+              <select>
+                <option value="Option 1">Nord</option>
+                <option value="Option 2">South</option>
+                <option value="Option 3">East</option>
+                <option value="Option 3">West</option>
+              </select>
+            </label>
+            <label>
+              <span>MultiSelect</span>
+              <select multiple>
+                <option value="Option 1">Nord</option>
+                <option value="Option 2">South</option>
+                <option value="Option 3">East</option>
+                <option value="Option 3">West</option>
+              </select>
+            </label>
+            <label>
+              <span>Textarea</span>
+              <textarea placeholder="Hi Dave …"></textarea>
+            </label>
+            <label>
+              <input type="checkbox" />
+              <span>Checkbox input</span>
+            </label>
+            <label>
+              <input type="radio" />
+              <span>Radio input</span>
+            </label>
+
+            <button type="submit">Submit</button>
+            <button>Cancel</button>
           </fieldset>
         </form>
       </section>
@@ -265,6 +264,7 @@
           <li>Last list item just for the fun</li>
         </ol>
         <div>
+          <p>Description lists B-)</p>
           <dl>
             <dt>Alpha</dt>
             <dd><kbd>alpha</kbd></dd>
@@ -291,10 +291,11 @@
           <code>&lt;pre&gt;</code>.
         </p>
         <p>
-          This is some <ins>insertedtext</ins> while this is some
-          <del>deleted text</del>, then <samp>some sample text</samp> and last
-          <kbd>some kbd</kbd> and some <code>code here</code> and some
-          <mark>Markings?</mark> and some <var>1234567890</var>
+          This is some <ins>inserted text</ins> while this is some
+          <del>deleted text</del>, then some <samp>sample</samp>,
+          <kbd>keyboard</kbd>, some <code>code</code>, some
+          <mark>markings</mark> and some variables, mostly for numbers:
+          <var>1234567890</var>
         </p>
         <div>
           <pre><code>.some-class {
@@ -383,10 +384,6 @@
               <td>Hayward</td>
             </tr>
           </tbody>
-
-          <abbr title="United Federation of Planets"
-            >United Federation of Planets</abbr
-          >
         </table>
       </section>
       <footer>

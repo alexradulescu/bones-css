@@ -321,7 +321,7 @@ fieldset {
   border-radius: 0.6rem;
   margin: 0;
   margin-bottom: 1.6rem;
-  padding: 0.8rem 1.6rem;
+  padding: 0.8rem 1.6rem 1.6rem 1.6rem;
 }
 form fieldset,
 fieldset form {
