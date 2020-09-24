@@ -25,8 +25,6 @@
   --black: #000;
 
   --grey-100: #f4f4f4;
-  /* --grey-200: #e4e4e6; */
-  /* --grey-300: #e2e8f0; */
   --grey-400: #cbd5e0;
   --grey-500: #a3a2a8;
   --grey-600: #6e6e76;
@@ -34,21 +32,19 @@
   --grey-800: #2f2e33;
   --grey-900: #1d1d1f;
 
-  --blue-50: #e3f2fd;
-  --blue-100: #bbdefb;
-  --blue-500: #2196f3;
-  --blue-600: #1e88e5;
-  --blue-700: #1976d2;
-  --blue-800: #1565c0;
+  --blue-white: #e3f2fd;
+  --blue-light: #bbdefb;
+  --blue: #1976d2;
+  --blue-dark: #1565c0;
 
-  --yellow-300: #fef1cc;
-  --yellow-900: #91400e;
+  --yellow-light: #fef1cc;
+  --yellow-dark: #91400e;
 
-  --green-50: #e8f5e9;
-  --green-900: #1b5e20;
+  --green-light: #e8f5e9;
+  --green-dark: #1b5e20;
 
-  --red-50: #ffebee;
-  --red-900: #b71c1c;
+  --red-light: #ffebee;
+  --red-dark: #b71c1c;
 
   --sans-font-family: system-ui, -apple-system, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
@@ -79,6 +75,7 @@ body {
   font-family: var(--sans-font-family);
   color: var(--grey-800);
   background-color: var(--white);
+  margin: 0;
 }
 
 /* Layout
@@ -144,7 +141,6 @@ h6 {
   font-size: 1.6rem;
   line-height: 1.6;
   letter-spacing: 0;
-  font-weight: 400;
 }
 
 p {
@@ -187,14 +183,14 @@ button:focus {
 
 button[type='submit'] {
   color: var(--white);
-  background-color: var(--blue-800);
-  border-color: var(--blue-800);
+  background-color: var(--blue-dark);
+  border-color: var(--blue-dark);
 }
 button[type='submit']:hover,
 button[type='submit']:focus {
   color: #fff;
-  background-color: var(--blue-700);
-  border-color: var(--blue-700);
+  background-color: var(--blue);
+  border-color: var(--blue);
 }
 
 /* Forms
@@ -237,7 +233,7 @@ input[type='radio']:focus,
 textarea:focus,
 select:focus {
   border: 1px solid var(--grey-600);
-  box-shadow: 0 0 0 3px var(--blue-100);
+  box-shadow: 0 0 0 3px var(--blue-light);
   outline: 0;
 }
 select:not([multiple]) {
@@ -292,13 +288,13 @@ input[type='checkbox']:before {
 }
 input[type='checkbox']:checked,
 input[type='radio']:checked {
-  background-color: var(--blue-500);
-  border: 1px solid var(--blue-500);
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
 }
 input[type='checkbox']:checked:hover,
 input[type='radio']:checked:hover {
-  background-color: var(--blue-600);
-  border: 1px solid var(--blue-600);
+  background-color: var(--blue-dark);
+  border: 1px solid var(--blue-dark);
 }
 
 label:not([for]),
@@ -388,20 +384,20 @@ code {
   background-color: var(--grey-700);
 }
 kbd {
-  color: var(--blue-700);
-  background-color: var(--blue-50);
+  color: var(--blue);
+  background-color: var(--blue-white);
 }
 mark {
-  color: var(--yellow-900);
-  background-color: var(--yellow-300);
+  color: var(--yellow-dark);
+  background-color: var(--yellow-light);
 }
 ins {
-  color: var(--green-900);
-  background-color: var(--green-50);
+  color: var(--green-dark);
+  background-color: var(--green-light);
 }
 del {
-  color: var(--red-900);
-  background-color: var(--red-50);
+  color: var(--red-dark);
+  background-color: var(--red-light);
 }
 samp {
   color: var(--grey-900);
@@ -432,12 +428,12 @@ pre > code {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: var(--blue-600);
+  color: var(--blue);
 }
 a:hover,
 a:focus,
 a:visited {
-  color: var(--blue-800);
+  color: var(--blue-dark);
 }
 
 nav {
@@ -562,7 +558,7 @@ details {
   overflow: hidden;
 }
 details:focus-within {
-  box-shadow: 0 0 0 3px var(--blue-100);
+  box-shadow: 0 0 0 3px var(--blue-light);
   outline: none;
 }
 details:hover {
