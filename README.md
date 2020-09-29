@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/alexradulescu/bones-css)
+
 # Soul CSS
 
 A simple, beautiful, class-less css framework
