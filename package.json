@@ -1,6 +1,6 @@
 {
-  "name": "bones-css",
-  "version": "1.1.0",
+  "name": "@alex.radulescu/bones-css",
+  "version": "1.1.1",
   "description": "A super simple and beautiful css framework",
   "main": "index.html",
   "scripts": {
