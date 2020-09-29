@@ -1,0 +1,22 @@
+{
+  "name": "bones-css",
+  "version": "1.0.0",
+  "description": "A super simple and beautiful css framework",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexradulescu/bones-css.git"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "Alex Radulescu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexradulescu/bones-css/issues"
+  },
+  "homepage": "https://github.com/alexradulescu/bones-css#readme"
+}
