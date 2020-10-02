@@ -1,10 +1,11 @@
 {
   "name": "@alex.radulescu/bones-css",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A super simple and beautiful css framework",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/alexradulescu/bones-css/issues"
   },
-  "homepage": "https://github.com/alexradulescu/bones-css#readme"
+  "homepage": "https://github.com/alexradulescu/bones-css#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "parcel-bundler": "^1.12.4",
+    "postcss": "^8.1.0",
+    "postcss-modules": "^3.2.2"
+  },
+  "dependencies": {}
 }

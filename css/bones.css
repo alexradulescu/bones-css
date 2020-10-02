@@ -159,39 +159,6 @@ var {
   font-style: normal;
 }
 
-/* Buttons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-button {
-  padding: 1.1rem 3.2rem;
-  color: var(--grey-600);
-  font-size: 1.3rem;
-  font-weight: 500;
-  letter-spacing: 0.1px;
-  white-space: nowrap;
-  border-radius: 0.6rem;
-  border: 1px solid var(--grey-500);
-  background-color: transparent;
-  cursor: pointer;
-  margin-bottom: 1.2rem;
-}
-button:hover,
-button:focus {
-  color: var(--grey-800);
-  border-color: var(--grey-600);
-  outline: 0;
-}
-
-button[type='submit'] {
-  color: var(--white);
-  background-color: var(--blue-dark);
-  border-color: var(--blue-dark);
-}
-button[type='submit']:hover,
-button[type='submit']:focus {
-  background-color: var(--blue);
-  border-color: var(--blue);
-}
-
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* 1. From normalize.css */
@@ -335,6 +302,38 @@ fieldset form {
   margin-bottom: 0;
 }
 
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button {
+    color: var(--grey-600);
+    white-space: nowrap;
+    border-radius: 0.6rem;
+    border: 1px solid var(--grey-500);
+    background-color: transparent;
+    cursor: pointer;
+    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+    padding: .8rem 1.6rem;
+}
+button:hover,
+button:focus {
+  color: var(--grey-800);
+  border-color: var(--grey-600);
+  outline: 0;
+}
+
+button[type='submit'] {
+  color: var(--white);
+  background-color: var(--blue-dark);
+  border-color: var(--blue-dark);
+}
+button[type='submit']:hover,
+button[type='submit']:focus {
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
@@ -364,7 +363,7 @@ dl {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  padding: 0.8rem 1.2rem;
+  padding: 0.8rem 0;
 }
 dl:not(:last-of-type) {
   border-bottom: 1px solid var(--grey-400);
