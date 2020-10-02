@@ -161,6 +161,38 @@ var {
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+form {
+  margin-bottom: 2.4rem;
+}
+fieldset {
+  border: 1px solid var(--grey-400);
+  border-radius: 0.6rem;
+  margin: 0;
+  margin-bottom: 1.6rem;
+  padding: 0.8rem 1.6rem 1.6rem 1.6rem;
+}
+form fieldset,
+fieldset form {
+  margin-bottom: 0;
+}
+
+form input,
+fieldset input,
+form select,
+fieldset select,
+form textarea,
+fieldset textarea {
+  width: 100%;
+}
+
+label:not([for]),
+legend {
+  display: block;
+  margin-bottom: 0.4rem;
+  padding: 0;
+}
+
 /* 1. From normalize.css */
 input {
   font-size: 10px; /* 1 */
@@ -176,7 +208,7 @@ textarea {
   margin: 0; /* 2 */
 }
 
-input:not([type='checkbox']):not([type='radio']):not([type='range']),
+input,
 textarea,
 select {
   -webkit-appearance: none;
@@ -192,7 +224,7 @@ select {
   border-radius: 0.6rem;
   box-shadow: none;
   box-sizing: border-box;
-  width: 100%;
+  min-width: 21rem;
 }
 textarea,
 select[multiple] {
@@ -201,16 +233,12 @@ select[multiple] {
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
 }
-input:not([type='checkbox']):not([type='radio']):not([type='range']):hover,
-input[type='checkbox']:hover,
-input[type='radio']:hover,
+input:hover,
 textarea:hover,
 select:hover {
   border: 1px solid var(--grey-600);
 }
-input:not([type='checkbox']):not([type='radio']):not([type='range']):focus,
-input[type='checkbox']:focus,
-input[type='radio']:focus,
+input:focus,
 textarea:focus,
 select:focus {
   border: 1px solid var(--grey-600);
@@ -225,17 +253,14 @@ select:not([multiple]) {
 
 input[type='checkbox'],
 input[type='radio'] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 1px solid var(--grey-500);
   width: 1.8rem;
   height: 1.8rem;
-  display: inline-flex;
   cursor: pointer;
-  position: relative;
+  padding: 0;
+  margin-bottom: 0;
   -webkit-transform: translateY(3px);
-          transform: translateY(3px);
+  transform: translateY(3px);
+  min-width: initial;
 }
 input[type='checkbox']:hover,
 input[type='radio']:hover {
@@ -262,7 +287,7 @@ input[type='checkbox']:before {
   width: 1.4rem;
   height: 0.7rem;
   -webkit-transform: rotate(-50deg);
-          transform: rotate(-50deg);
+  transform: rotate(-50deg);
   border-left: 2px solid var(--white);
   border-bottom: 2px solid var(--white);
   position: absolute;
@@ -280,41 +305,18 @@ input[type='radio']:checked:hover {
   border: 1px solid var(--blue-dark);
 }
 
-label:not([for]),
-legend {
-  display: block;
-  margin-bottom: 0.4rem;
-  padding: 0;
-}
-
-form {
-  margin-bottom: 2.4rem;
-}
-fieldset {
-  border: 1px solid var(--grey-400);
-  border-radius: 0.6rem;
-  margin: 0;
-  margin-bottom: 1.6rem;
-  padding: 0.8rem 1.6rem 1.6rem 1.6rem;
-}
-form fieldset,
-fieldset form {
-  margin-bottom: 0;
-}
-
-
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button {
-    color: var(--grey-600);
-    white-space: nowrap;
-    border-radius: 0.6rem;
-    border: 1px solid var(--grey-500);
-    background-color: transparent;
-    cursor: pointer;
-    margin-bottom: 1.2rem;
-    font-size: 1.6rem;
-    padding: .8rem 1.6rem;
+  color: var(--grey-600);
+  white-space: nowrap;
+  border-radius: 0.6rem;
+  border: 1px solid var(--grey-500);
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+  padding: 0.8rem 1.6rem;
 }
 button:hover,
 button:focus {
