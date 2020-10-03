@@ -2,30 +2,30 @@
   "name": "@alex.radulescu/bones-css",
   "version": "0.3.0",
   "description": "A super simple and beautiful css framework",
-  "main": "index.html",
-  "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html"
+  "homepage": "https://github.com/alexradulescu/bones-css#readme",
+  "author": "Alex Radulescu",
+  "keywords": [
+    "css"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexradulescu/bones-css/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexradulescu/bones-css.git"
   },
-  "keywords": [
-    "css"
-  ],
-  "author": "Alex Radulescu",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/alexradulescu/bones-css/issues"
+  "scripts": {
+    "start": "parcel serve ./index.html",
+    "build": "parcel build ./index.html"
   },
-  "homepage": "https://github.com/alexradulescu/bones-css#readme",
   "devDependencies": {
-    "autoprefixer": "^10.0.1",
-    "parcel-bundler": "^1.12.4",
-    "postcss": "^8.1.0",
-    "postcss-modules": "^3.2.2",
+    "parcel": "^2.0.0-beta.1",
     "prettier": "2.1.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "browserslist": [
+    "> 0.2%",
+    "not dead"
+  ]
 }

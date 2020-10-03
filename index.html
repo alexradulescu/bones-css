@@ -2,83 +2,59 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-    <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
     <title>
       Bones: Super simple(html only, no css classes), beautiful, kind of micro
       css framework
     </title>
     <meta name="description" content="" />
     <meta name="author" content="" />
-
-    <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
     />
-
-    <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="./css/bones.css" />
+    <link rel="stylesheet" href="./bones.css" />
   </head>
   <body>
     <main>
       <header>
         <h3>Bones CSS</h3>
-        <nav>
-          <a>Menu</a>
-        </nav>
+        <nav><a>Menu</a></nav>
       </header>
       <h5>
         Super simple(html only, no css classes), beautiful, kind of micro css
         framework
       </h5>
-
       <nav>
-        <a href="#intro">Intro</a>
-        <a href="#grid">Grid</a>
+        <a href="#intro">Intro</a> <a href="#grid">Grid</a>
         <a href="#typography">Typography</a>
-        <a href="#forms">Forms & Buttons</a>
-        <a href="#lists">Others</a>
+        <a href="#forms">Forms & Buttons</a> <a href="#lists">Others</a>
       </nav>
       <br />
-
       <section id="intro">
         <h5>What? Why? Another framework?</h5>
         <p>
-          Bones is a super simple and small css framework.
-          <br />
+          Bones is a super simple and small css framework. <br />
           It was inspired by Skeleton css, Water.css and other super small and
           focused mini or micro-frameworks(if we can even call them such).
           <br />
           Bones works directly with html elements, no css classes, no ids,
           nothing. This has some pros and cons, or rather some use-cases and
-          some stay-away-cases ;-) .
-          <br />
+          some stay-away-cases ;-) . <br />
           It is almost what could have been if browsers cared to make
-          good-looking standards.
-          <br />
+          good-looking standards. <br />
           I made it for one specific case: building a simple, quick, beautiful
-          prototype based solely on good HTML code.
-          <br />
+          prototype based solely on good HTML code. <br />
           I make a lot of prototypes to play with different things, and I got
           bored to keep adding lots of classes and bigfiles. This just works
-          with one line import.
-          <br />
+          with one line import. <br />
           At the same time, this is absolutely not a for a full on serious app
           or website. It will clash with most other frameworks and would only
-          work if you want to manualy extend it.
-          <br />
+          work if you want to manualy extend it. <br />
           Also it is super oppinionated. Some choises are obvious, while others
-          needed some serious code. Feel free to check the comments.
-          <br />
+          needed some serious code. Feel free to check the comments. <br />
           Last but not least, hope it helps, from me a message if you used it
           with a screenshot or with suggestions and check the examples below.
         </p>
-
         <pre><code>
 &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@alex.radulescu/bones-css/css/bones.min.css" / &gt;
         </code></pre>
@@ -86,42 +62,16 @@
 &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@alex.radulescu/bones-css/css/bones.min.css" / &gt;
         </code></pre>
       </section>
-
-      <!-- Why use Skeleton -->
-      <!-- <div id="intro">
-        <h6 >Is Skeleton for you?</h6>
-        <p>
-          You should use Skeleton if you're embarking on a smaller project or
-          just don't feel like you need all the utility of larger frameworks.
-          Skeleton only styles a handful of standard HTML elements and includes
-          a grid, but that's often more than enough to get started. In fact,
-          <u>this site is built on Skeleton and has ~200 lines of custom CSS</u>
-          (half of which is the docking navigation).
-        </p>
-        <p>
-          Love Skeleton and want to Tweet it, share it, or star it? Well, I
-          appreciate that &lt;3
-        </p>
-      </div> -->
       <hr />
-
-      <!-- Grid -->
       <section id="grid">
         <h5>The grid</h5>
         <p></p>
         <aside>
-          <kbd>A third column</kbd>
-          <kbd>A third column</kbd>
+          <kbd>A third column</kbd> <kbd>A third column</kbd>
           <kbd>A third column</kbd>
         </aside>
-
-        <!-- CODE EXAMPLE ———————————————————————————————————————— -->
-
-        <!-- ————————————————————————————————————————————————————— -->
       </section>
       <hr />
-
-      <!-- Typography -->
       <section id="typography">
         <h5>Typography</h5>
         <h1>
@@ -143,16 +93,13 @@
           Heading <span> <code>&lt;h6&gt;</code></span>
         </h6>
         <p>
-          Type basics like
-          <a href="http://getskeleton.com/#">anchors</a>,
+          Type basics like <a href="http://getskeleton.com/#">anchors</a>,
           <strong>strong</strong>, <em>emphasis</em>, and <u>underline</u> are
           all obviously included.
         </p>
       </section>
       <hr />
-
-      <!-- Forms -->
-    <section id="forms">
+      <section id="forms">
         <h5>Forms</h5>
         <p>
           Forms are a huge pain, but hopefully these styles make it a bit
@@ -161,8 +108,7 @@
           other.
         </p>
         <div>
-          <input type="search" placeholder="Search..." />
-          <button>Find</button>
+          <input type="search" placeholder="Search..." /> <button>Find</button>
         </div>
         <form>
           <fieldset>
@@ -179,14 +125,8 @@
               <span>Password Input</span>
               <input type="password" placeholder="..." />
             </label>
-            <label>
-              <span>Date Input</span>
-              <input type="date" />
-            </label>
-            <label>
-              <span>Month Input</span>
-              <input type="month" />
-            </label>
+            <label> <span>Date Input</span> <input type="date" /> </label>
+            <label> <span>Month Input</span> <input type="month" /> </label>
             <label>
               <span>Search Input</span>
               <input type="search" placeholder="Search..." />
@@ -234,22 +174,14 @@
               <textarea placeholder="Hi Dave …"></textarea>
             </label>
             <label>
-              <input type="checkbox" />
-              <span>Checkbox input</span>
+              <input type="checkbox" /> <span>Checkbox input</span>
             </label>
-            <label>
-              <input type="radio" />
-              <span>Radio input</span>
-            </label>
-
-            <button type="submit">Submit</button>
-            <button>Cancel</button>
+            <label> <input type="radio" /> <span>Radio input</span> </label>
+            <button type="submit">Submit</button> <button>Cancel</button>
           </fieldset>
         </form>
       </section>
       <hr />
-
-      <!-- Lists -->
       <section id="lists">
         <h5>Lists</h5>
         <ul>
@@ -291,8 +223,6 @@
         </div>
       </section>
       <hr />
-
-      <!-- Code -->
       <section id="code">
         <h5>Code</h5>
         <p>
@@ -320,8 +250,6 @@
         </div>
       </section>
       <hr />
-
-      <!-- Blockquote -->
       <section id="Blockquote">
         <h5>Blockquote</h5>
         <blockquote
@@ -335,16 +263,13 @@
             >Notes</a
           >
           for how to change it). A URL for the source of the quotation may be
-          given using the
-          <code>cite</code> attribute, while a text representation of the source
-          can be given using the <code>&lt;cite&gt;</code> cite element.'
-
+          given using the <code>cite</code> attribute, while a text
+          representation of the source can be given using the
+          <code>&lt;cite&gt;</code> cite element.'
           <cite>MDN, 'The Block Quotation element'</cite>
         </blockquote>
       </section>
       <hr />
-
-      <!-- Image -->
       <section id="image">
         <h5>Image</h5>
         <img src="https://placekitten.com/408/287" alt="Example kitten" />
@@ -352,7 +277,7 @@
           <img src="https://placekitten.com/408/287" alt="Example kitten" />
           <figcaption>Some kittens in a figure</figcaption>
         </figure>
-        <details open="">
+        <details open>
           <summary>Click to Hide...</summary>
           <p>
             The HTML Details Element (details) creates a disclosure widget in
@@ -363,8 +288,6 @@
         </details>
       </section>
       <hr />
-
-      <!-- Tables -->
       <section id="tables">
         <h5>Tables</h5>
         <p>
