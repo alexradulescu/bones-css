@@ -1,21 +1,27 @@
 /*
-* Bones CSS V0.5.0
+* Bones CSS V0.5.1
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 */
 
 /* Table of contents
 ––––––––––––––––––––––––––––––––––––––––––––––––––
-  - Normalize
   - Variables
-  - Base Styles
-  - Layout & Grid
+  - Base Styles & Layout
+  - Grid
   - Typography
-  - Buttons
   - Forms
+  - Buttons
   - Lists
   - Badges
-  - Other: Links & Tables & Spacing  
+  - Links
+  - Tables
+  - Hr
+  - Quote
+  - Media
+  - Header & Footer
+  - Details & Summary
+  - Print
 */
 
 /* Variables
@@ -56,8 +62,9 @@
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* NOTE
-html is set to 62.5% so that all the REM measurements throughout Skeleton
-are based on 10px sizing. So basically 1.5rem = 15px :) */
+html is set to 10px so that all the REM measurements throughout Bones
+are based on 10 sizing. So basically 1.5rem = 15px :) */
+*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -69,27 +76,19 @@ html {
 }
 
 body {
-  margin: 0;
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
   font-family: var(--sans-font-family);
   color: var(--grey-800);
   background-color: var(--white);
-  margin: 0;
-}
-
-/* Layout
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-main {
-  position: relative;
-  width: 100%;
   max-width: 96rem;
   margin: 0 auto;
   padding: 0 2.4rem;
-  box-sizing: border-box;
 }
 
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 aside {
   display: -ms-grid;
   display: grid;
@@ -219,7 +218,6 @@ select {
   margin-bottom: 1.2rem;
   border-radius: 0.6rem;
   box-shadow: none;
-  box-sizing: border-box;
   min-width: 21rem;
 }
 textarea,
@@ -236,7 +234,8 @@ select:hover {
 }
 input:focus,
 textarea:focus,
-select:focus {
+select:focus,
+button:focus {
   border: 1px solid var(--grey-600);
   box-shadow: 0 0 0 3px var(--blue-light);
   outline: 0;
@@ -254,7 +253,6 @@ input[type='radio'] {
   cursor: pointer;
   padding: 0;
   margin-bottom: 0;
-  -webkit-transform: translateY(3px);
   transform: translateY(3px);
   min-width: initial;
 }
@@ -282,7 +280,6 @@ input[type='checkbox']:before {
   content: '';
   width: 1.4rem;
   height: 0.7rem;
-  -webkit-transform: rotate(-50deg);
   transform: rotate(-50deg);
   border-left: 2px solid var(--white);
   border-bottom: 2px solid var(--white);
@@ -454,23 +451,28 @@ nav {
   white-space: nowrap;
   overflow: auto;
   max-width: 100%;
+  padding: 3px;
 }
-nav a {
+nav > a {
   display: inline-flex;
-  padding: 1rem 1.2rem;
   text-align: center;
-  font-size: 1.3rem;
-  font-weight: 500;
-  letter-spacing: 0.1px;
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
   border-radius: 0.6rem;
+  line-height: 1.15;
+  font-size: 1.6rem;
+  padding: 0.8rem 1.6rem;
 }
-nav a:hover,
-nav a:focus,
-nav a:visited {
+nav > a:hover,
+nav > a:focus,
+nav > a:visited {
   background-color: var(--grey-100);
+}
+
+nav > a:focus {
+  box-shadow: 0 0 0 3px var(--blue-light);
+  outline: 0;
 }
 
 /* Tables
@@ -524,12 +526,14 @@ cite {
   color: var(--grey-600);
 }
 
-/* Images
+/* Media
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 figure {
   margin: 0 0 2.4rem 0;
 }
-img {
+img,
+video,
+audio {
   max-width: 100%;
 }
 figcaption {
