@@ -1,6 +1,6 @@
 {
   "name": "@alex.radulescu/bones-css",
-  "version": "0.3.0",
+  "version": "0.4.1",
   "description": "A super simple and beautiful css framework",
   "homepage": "https://github.com/alexradulescu/bones-css#readme",
   "author": "Alex Radulescu",
@@ -16,7 +16,9 @@
     "url": "git+https://github.com/alexradulescu/bones-css.git"
   },
   "scripts": {
+    "prestart": "rm -rf dist",
     "start": "parcel serve ./index.html",
+    "prebuild": "rm -rf dist",
     "build": "parcel build ./index.html"
   },
   "devDependencies": {
