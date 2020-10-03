@@ -107,8 +107,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
-  margin-bottom: 1em;
+  margin-top: 2.4rem;
+  margin-bottom: 1.2rem;
   font-weight: 300;
   color: var(--grey-900);
 }
@@ -142,11 +142,6 @@ h6 {
   letter-spacing: 0;
 }
 
-p {
-  margin-top: 0;
-  margin-bottom: 1em;
-}
-
 var {
   font-family: var(--mono-font-family);
   font-style: normal;
@@ -155,19 +150,11 @@ var {
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-form {
-  margin-bottom: 2.4rem;
-}
 fieldset {
   border: 1px solid var(--grey-400);
   border-radius: 0.6rem;
   margin: 0;
-  margin-bottom: 1.6rem;
   padding: 0.8rem 1.6rem 1.6rem 1.6rem;
-}
-form fieldset,
-fieldset form {
-  margin-bottom: 0;
 }
 
 form input,
@@ -305,7 +292,6 @@ button {
   border: 1px solid var(--grey-500);
   background-color: transparent;
   cursor: pointer;
-  margin-bottom: 1.2rem;
   font-size: 1.6rem;
   padding: 0.8rem 1.6rem;
 }
@@ -338,8 +324,6 @@ ol {
 ol,
 ul {
   padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 2.4rem;
 }
 ul ul,
 ul ol,
@@ -412,7 +396,6 @@ samp {
 
 pre {
   overflow: auto;
-  margin-bottom: 2.4rem;
   white-space: normal;
 }
 pre > code,
@@ -477,7 +460,6 @@ nav > a:focus {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 2.4rem;
 }
 th,
 td {
@@ -501,8 +483,7 @@ tr:first-child th {
 /* Hr
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
-  margin-top: 3.2rem;
-  margin-bottom: 3.6rem;
+  margin: 2.4rem 0;
   border-width: 0;
   border-top: 1px solid var(--grey-400);
 }
@@ -513,9 +494,7 @@ blockquote,
 q {
   border-left: 3px solid var(--grey-400);
   margin-left: 0;
-  margin-right: 0;
   padding-left: 2.4rem;
-  margin-bottom: 2.4rem;
 }
 cite {
   display: block;
@@ -526,7 +505,8 @@ cite {
 /* Media
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 figure {
-  margin: 0 0 2.4rem 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 img,
 video,
@@ -576,7 +556,6 @@ details {
   align-items: flex-start;
   border: 1px solid var(--grey-400);
   padding: 1.2rem 1.2rem 0;
-  margin: 1.2rem 0;
   border-radius: 6px;
   overflow: hidden;
 }
