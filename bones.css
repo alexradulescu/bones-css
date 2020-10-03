@@ -1,5 +1,5 @@
 /*
-* Bones CSS V0.5.1
+* Bones CSS V0.6.0
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 */
@@ -74,9 +74,8 @@ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
-
 body {
-  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  font-size: 1.6rem;
   line-height: 1.6;
   font-weight: 400;
   font-family: var(--sans-font-family);
@@ -109,44 +108,43 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1em;
   font-weight: 300;
   color: var(--grey-900);
 }
 h1 {
-  font-size: 4.2rem;
+  font-size: 4.4rem;
   line-height: 1.2;
   letter-spacing: -0.1rem;
 }
 h2 {
-  font-size: 3.6rem;
+  font-size: 3.8rem;
   line-height: 1.25;
   letter-spacing: -0.1rem;
 }
 h3 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   line-height: 1.3;
   letter-spacing: -0.1rem;
 }
 h4 {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   line-height: 1.35;
   letter-spacing: -0.08rem;
 }
 h5 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   line-height: 1.5;
   letter-spacing: -0.05rem;
 }
 h6 {
-  font-size: 1.6rem;
-  line-height: 1.6;
+  font-size: 1.8rem;
   letter-spacing: 0;
 }
 
 p {
   margin-top: 0;
-  margin-bottom: 2.4rem;
+  margin-bottom: 1em;
 }
 
 var {
@@ -347,11 +345,8 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
+  margin: 0.8rem 0 0.8rem 2.4rem;
   font-size: 90%;
-}
-li {
-  margin-bottom: 1rem;
 }
 
 dl {
@@ -418,6 +413,7 @@ samp {
 pre {
   overflow: auto;
   margin-bottom: 2.4rem;
+  white-space: normal;
 }
 pre > code,
 pre > kbd,
@@ -427,13 +423,14 @@ pre > del,
 pre > samp {
   display: block;
   padding: 1rem 1.5rem;
-  white-space: pre-wrap;
+  white-space: normal;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-left: 3px solid currentColor;
 }
 pre > code {
   border-color: var(--black);
+  white-space: pre-wrap;
 }
 
 /* Links
@@ -535,6 +532,13 @@ img,
 video,
 audio {
   max-width: 100%;
+  margin-bottom: 0.8rem;
+}
+video {
+  display: block;
+}
+figure > img {
+  margin-bottom: 0;
 }
 figcaption {
   font-style: italic;
@@ -548,6 +552,7 @@ footer {
   padding: 0.8rem 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 header {
   border-bottom: 1px solid var(--grey-400);
