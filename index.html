@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>
-      Bones CSS - Simple, nice, lightweight, css boilerplate for prototypes
+      Bones CSS - Simple, Beautiful, Lightweight, CSS boilerplate for prototypes
     </title>
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -23,42 +23,38 @@
       </header>
       <pre>
         <kbd>
-          <strong>
-            Simple, nice, lightweight, css boilerplate for prototypes
-          </strong>
+          Simple, Beautiful, Lightweight, CSS boilerplate for prototypes
         </kbd>
       </pre>
       <section>
         <aside>
           <div>
-            <h6>Simple</h6>
+            <h5>Simple</hh56>
+            <p>Styling plain html elements. No css classes to remember.</p>
+          </div>
+          <div>
+            <h5>Beautiful</h5>
             <p>
-              No css classes to remember at all. Just well structured plain
-              html.
+              Did my best to make it look good. Suggestions are still welcome
+              though 😉
             </p>
           </div>
           <div>
-            <h6>Nice</h6>
-            <p>
-              Did my best to make it look good. Suggestions are still welcome 😉
-            </p>
-          </div>
-          <div>
-            <h6>Lightweight</h6>
+            <h5>Lightweight</h5>
             <p>Less than 600 lines of code (excluding comments).</p>
           </div>
         </aside>
         <hr />
         <aside>
           <div>
-            <h6>Great for</h6>
+            <h5>Great for</h5>
             <p>
               Quick prototypes or tutorials, locally or on codesandbox, gitpod,
               stackblitz,
             </p>
           </div>
           <div>
-            <h6>Not good for</h6>
+            <h5>Not good for</h5>
             <p>
               Serious or big projects because it targets html elements directly.
               Also it can override other css frameworks and there are many
@@ -66,22 +62,19 @@
             </p>
           </div>
           <div>
-            <h6>Inspired by</h6>
-            <p>
-              Skeleton css, Water css, MVP css, 1-line layouts, Tailwind css,
-              Material design
-            </p>
+            <h5>Inspired by</h5>
+            <p>Skeleton css, Water css, Tailwind css, 1-line layouts</p>
           </div>
         </aside>
 
         <hr />
-        <h6 id="useit">How to use</h6>
+        <h5 id="useit">How to use</h5>
         <p>
           Copy&Paste the following code in the <code>&lt;head&gt;</code> of your
           <samp>index.html</samp>
         </p>
         <pre><code>
-&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@alex.radulescu/bones-css@0.6.2/dist/bones.84f7d8b6.css" /&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@alex.radulescu/bones-css@0.6.3/dist/bones.323a6f63.css" /&gt;
         </code></pre>
         <p>
           If you like Bones, feel free to
@@ -116,127 +109,220 @@
 
       <section id="grid">
         <h5>The grid</h5>
-        <p></p>
+        <p>
+          The grid is represented by the <code>aside</code> element. The first
+          level of children inside it will be evenly distributed on desktop and
+          tablet.
+        </p>
         <aside>
-          <kbd>A third column</kbd> <kbd>A third column</kbd>
-          <kbd>A third column</kbd>
+          <samp>Equal width colum</samp>
+          <samp>Equal width colum</samp>
+          <samp>Equal width colum</samp>
         </aside>
+        <pre><code>&lt;aside&gt;
+  &lt;samp&gt;Equal width colum&lt;/samp&gt;
+  &lt;samp&gt;Equal width colum&lt;/samp&gt;
+  &lt;samp&gt;Equal width colum&lt;/samp&gt;
+&lt;/aside&gt;</code></pre>
       </section>
       <hr />
 
       <section id="typography">
         <h5>Typography</h5>
-        <h1>
-          Heading<span> <code>&lt;h1&gt;</code> </span>
-        </h1>
-        <h2>
-          Heading<span> <code>&lt;h2&gt;</code></span>
-        </h2>
-        <h3>
-          Heading<span> <code>&lt;h3&gt;</code></span>
-        </h3>
-        <h4>
-          Heading<span> <code>&lt;h4&gt;</code></span>
-        </h4>
-        <h5>
-          Heading<span> <code>&lt;h5&gt;</code></span>
-        </h5>
-        <h6>
-          Heading <span> <code>&lt;h6&gt;</code></span>
-        </h6>
-        <p>
-          Type basics like <a href="http://getskeleton.com/#">anchors</a>,
-          <strong>strong</strong>, <em>emphasis</em>, and <u>underline</u> are
-          all obviously included.
-        </p>
+        <h1>Heading 1 <code>&lt;h1&gt;</code></h1>
+        <h2>Heading 2 <code>&lt;h2&gt;</code></h2>
+        <h3>Heading 3 <code>&lt;h3&gt;</code></h3>
+        <h4>Heading 4 <code>&lt;h4&gt;</code></h4>
+        <h5>Heading 5 <code>&lt;h5&gt;</code></h5>
+        <h6>Heading 6 <code>&lt;h6&gt;</code></h6>
+
+        Type basics are all obviously included.
+        <ul>
+          <li>
+            <a href="#">Links/Anchors</a>
+            <code>&lt;a href="#"&gt;...&lt;/a&gt;</code>
+          </li>
+          <li>
+            <strong>Strong/Bold</strong>
+            <code>&lt;strong&gt;...&lt;/strong&gt;</code>
+          </li>
+          <li>
+            <em>Italic/Emphasys</em> <code>&lt;em&gt;...&lt;/em&gt;</code>
+          </li>
+          <li><u>Underline</u> <code>&lt;u&gt;...&lt;/u&gt;</code></li>
+          <li><s>Strikethrough</s> <code>&lt;s&gt;...&lt;/s&gt;</code></li>
+        </ul>
       </section>
 
       <section>
         <h5>Lists</h5>
-        <ul>
-          <li>Unordered lists have basic styles</li>
-          <li>
-            They use the circle list style
-            <ul>
-              <li>Nested lists styled to feel right</li>
-              <li>Can nest either type of list into the other</li>
-            </ul>
-          </li>
-          <li>Just more list items mama san</li>
-        </ul>
-        <ol>
-          <li>Ordered lists also have basic styles</li>
-          <li>
-            They use the decimal list style
-            <ul>
-              <li>Ordered and unordered can be nested</li>
-              <li>Can nest either type of list into the other</li>
-            </ul>
-          </li>
-          <li>Last list item just for the fun</li>
-        </ol>
-        <div>
-          <p>Description lists B-)</p>
-          <dl>
-            <dt>Alpha</dt>
-            <dd><kbd>alpha</kbd></dd>
-          </dl>
-          <dl>
-            <dt>Beta</dt>
-            <dd><ins>beta</ins></dd>
-          </dl>
-          <dl>
-            <dt>Gamma</dt>
-            <dd><del>gamma</del></dd>
-          </dl>
-        </div>
+        <aside>
+          <ul>
+            <li>Unordered lists have basic styles</li>
+            <li>
+              They use the circle list style
+              <ul>
+                <li>Nested lists styled to feel right</li>
+                <li>Can nest either type of list into the other</li>
+              </ul>
+            </li>
+            <li>Just more list items mama san</li>
+          </ul>
+          <pre>
+          <code>&lt;ul&gt;
+  &lt;li&gt;Unordered lists have basic styles&lt;/li&gt;
+  &lt;li&gt;
+    They use the circle list style
+    &lt;ul&gt;
+      &lt;li&gt;Nested lists styled to feel right&lt;/li&gt;
+      &lt;li&gt;Can nest either type of list into the other&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Just more list items mama san&lt;/li&gt;
+&lt;/ul&gt;</code>
+        </pre>
+        </aside>
+        <aside>
+          <ol>
+            <li>Ordered lists also have basic styles</li>
+            <li>
+              They use the decimal list style
+              <ul>
+                <li>Ordered and unordered can be nested</li>
+                <li>Can nest either type of list into the other</li>
+              </ul>
+            </li>
+            <li>Last list item just for the fun</li>
+          </ol>
+          <pre>
+            <code>&lt;ol&gt;
+  &lt;li&gt;Ordered lists also have basic styles&lt;/li&gt;
+  &lt;li&gt;
+    They use the decimal list style
+    &lt;ul&gt;
+      &lt;li&gt;Ordered and unordered can be nested&lt;/li&gt;
+      &lt;li&gt;Can nest either type of list into the other&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Last list item just for the fun&lt;/li&gt;
+&lt;/ol&gt;</code>
+          </pre>
+        </aside>
+        <h5>Description lists B-)</h5>
+        <aside>
+          <div>
+            <dl>
+              <dt>Name</dt>
+              <dd>James Bond</dd>
+            </dl>
+            <dl>
+              <dt>Age</dt>
+              <dd>Clasified</dd>
+            </dl>
+            <dl>
+              <dt>Nationality</dt>
+              <dd>British</dd>
+            </dl>
+          </div>
+          <pre>
+          <code>&lt;dl&gt;
+  &lt;dt&gt;Name&lt;/dt&gt;
+  &lt;dd&gt;James Bond&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+  &lt;dt&gt;Age&lt;/dt&gt;
+  &lt;dd&gt;Clasified&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+  &lt;dt&gt;Nationality&lt;/dt&gt;
+  &lt;dd&gt;British&lt;/dd&gt;
+&lt;/dl&gt;</code>
+        </pre>
+        </aside>
       </section>
 
       <section>
-        <h5>Code</h5>
+        <h5>Code/Badges/Alerts</h5>
         <p>
-          Code styling is kept basic – just wrap anything in a
-          <code>&lt;code&gt;</code> and it will appear like <code>this</code>.
-          For blocks of code, wrap a <code>&lt;code&gt;</code> with a
-          <code>&lt;pre&gt;</code>.
+          Code styling is kept quote standard and we highjacked some other
+          elements to create varieties of badges and alert boxes(badges wrapped
+          in a <code>pre</code> element).
         </p>
-        <p>
-          This is some <ins>inserted text</ins> while this is some
-          <del>deleted text</del>, then some <samp>sample</samp>,
-          <kbd>keyboard</kbd>, some <code>code</code>, some
-          <mark>markings</mark> and some variables, mostly for numbers:
-          <var>1234567890</var>
-        </p>
-        <div>
-          <pre><code>.some-class {
+        <aside>
+          <ul>
+            <li><ins>Success</ins></li>
+            <li><del>Danger</del></li>
+            <li><samp>Sample</samp></li>
+            <li><kbd>Info/Keyboard</kbd></li>
+            <li><code>Code</code></li>
+            <li><mark>Marking</mark></li>
+            <li><var>Var for monospaced: 1234567890</var></li>
+          </ul>
+          <pre>
+          <code>&lt;ins&gt;Success&lt;/ins&gt;
+&lt;del&gt;Danger&lt;/del&gt;
+&lt;samp&gt;Sample&lt;/samp&gt;
+&lt;kbd&gt;Info/Keyboard&lt;/kbd&gt;
+&lt;code&gt;Code&lt;/code&gt;
+&lt;mark&gt;Marking&lt;/mark&gt;
+&lt;var&gt;Var for monospaced: 1234567890&lt;/var&gt;</code>
+        </pre>
+        </aside>
+        <aside>
+          <div>
+            <pre><code>.some-class {
   random-property: a-value;
 }</code></pre>
-          <pre><kbd>Some info message</kbd></pre>
-          <pre><mark>Some warning message</mark></pre>
-          <pre><ins>Some success message</ins></pre>
-          <pre><del>Some danger message</del></pre>
-          <pre><samp>Some other kind of message</samp></pre>
-        </div>
+            <pre><kbd>Some info message</kbd></pre>
+            <pre><mark>Some warning message</mark></pre>
+            <pre><ins>Some success message</ins></pre>
+            <pre><del>Some danger message</del></pre>
+            <pre><samp>Some other kind of message</samp></pre>
+          </div>
+          <pre>
+          <code>&lt;pre&gt;&lt;code&gt;.some-class {
+  random-property: a-value;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;kbd&gt;Some info message&lt;/kbd&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;mark&gt;Some warning message&lt;/mark&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;ins&gt;Some success message&lt;/ins&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;del&gt;Some danger message&lt;/del&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;samp&gt;Some other kind of message&lt;/samp&gt;&lt;/pre&gt;</code>
+        </pre>
+        </aside>
       </section>
 
       <section>
         <h5>Blockquote</h5>
-        <blockquote
-          cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
-        >
-          'The HTML blockquote Element (or HTML Block Quotation Element)
-          indicates that the enclosed text is an extended quotation. Usually,
-          this is rendered visually by indentation (see
-          <a
-            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote#Usage_notes"
-            >Notes</a
+        <aside>
+          <blockquote
+            cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
           >
-          for how to change it). A URL for the source of the quotation may be
-          given using the <code>cite</code> attribute, while a text
-          representation of the source can be given using the
-          <code>&lt;cite&gt;</code> cite element.'
-          <cite>MDN, 'The Block Quotation element'</cite>
-        </blockquote>
+            'The HTML blockquote Element (or HTML Block Quotation Element)
+            indicates that the enclosed text is an extended quotation. Usually,
+            this is rendered visually by indentation (see
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote#Usage_notes"
+              >Notes</a
+            >
+            for how to change it). A URL for the source of the quotation may be
+            given using the <code>cite</code> attribute, while a text
+            representation of the source can be given using the
+            <code>&lt;cite&gt;</code> cite element.'
+            <cite>MDN, 'The Block Quotation element'</cite>
+          </blockquote>
+          <pre>
+            <code>&lt;blockquote cite=&quot;...&quot; &gt;
+  &apos;...&apos;
+  &lt;cite&gt;...&lt;/cite&gt;
+&lt;/blockquote&gt;</code>
+          </pre>
+        </aside>
       </section>
       <hr />
 
@@ -248,36 +334,48 @@
           height cross-browser so inputs can be stacked or placed alongside each
           other.
         </p>
-        <div>
-          <input type="search" placeholder="Search..." /> <button>Find</button>
-        </div>
-        <form>
+        <aside>
+          <div>
+            <p>
+              Solitary inputs (not in a form or label) get a default
+              standardised size.
+            </p>
+            <input type="search" placeholder="Search..." />
+            <button>Find</button>
+          </div>
+          <pre>
+            <code>&lt;input type=&quot;search&quot; placeholder=&quot;Search...&quot; /&gt; &lt;button&gt;Find&lt;/button&gt;</code>
+          </pre>
+        </aside>
+        <p>Input elements within a form or fieldset get a full width</p>
+
+        <aside>
           <fieldset>
             <legend>A legend</legend>
             <label>
-              <span>Text Input</span>
+              Text Input
               <input type="text" placeholder="John James" />
             </label>
             <label>
-              <span>Email Input</span>
+              Email Input
               <input type="email" placeholder="john.james@mailbox.com" />
             </label>
             <label>
-              <span>Password Input</span>
+              Password Input
               <input type="password" placeholder="..." />
             </label>
-            <label> <span>Date Input</span> <input type="date" /> </label>
-            <label> <span>Month Input</span> <input type="month" /> </label>
+            <label>Date Input<input type="date" /> </label>
+            <label>Month Input<input type="month" /> </label>
             <label>
-              <span>Search Input</span>
+              Search Input
               <input type="search" placeholder="Search..." />
             </label>
             <label>
-              <span>Number Input</span>
+              Number Input
               <input type="number" placeholder="123234" />
             </label>
             <label>
-              <span>Datalist Input</span>
+              Datalist Input
               <input
                 list="browsers"
                 autocomplete="off"
@@ -293,7 +391,7 @@
               </datalist>
             </label>
             <label>
-              <span>Select</span>
+              Select
               <select>
                 <option value="Option 1">Nord</option>
                 <option value="Option 2">South</option>
@@ -302,7 +400,7 @@
               </select>
             </label>
             <label>
-              <span>MultiSelect</span>
+              MultiSelect
               <select multiple>
                 <option value="Option 1">Nord</option>
                 <option value="Option 2">South</option>
@@ -311,116 +409,255 @@
               </select>
             </label>
             <label>
-              <span>Textarea</span>
+              Textarea
               <textarea placeholder="Hi Dave …"></textarea>
             </label>
-            <label>
-              <input type="checkbox" /> <span>Checkbox input</span>
-            </label>
-            <label> <input type="radio" /> <span>Radio input</span> </label>
+            <label> <input type="checkbox" /> Checkbox input</label>
+            <label> <input type="radio" /> Radio input</label>
             <button type="submit">Submit</button> <button>Cancel</button>
           </fieldset>
-        </form>
+          <pre>
+            <code>&lt;fieldset&gt;
+  &lt;legend&gt;A legend&lt;/legend&gt;
+  &lt;label&gt;
+    Text
+    &lt;!-- Input type can be one of the following: text, email, password, search, number , date, month --&gt;
+    &lt;input 
+      type=&quot;...&quot; 
+      placeholder=&quot;...&quot; /&gt;
+  &lt;/label&gt;
+  &lt;label&gt;
+    Datalist Input
+    &lt;input
+      list=&quot;browsers&quot;
+      autocomplete=&quot;off&quot;
+      placeholder=&quot;Choose a browser&quot;
+    /&gt;
+    &lt;datalist id=&quot;browsers&quot;&gt;
+      &lt;option value=&quot;Chrome&quot;&gt;&lt;/option&gt;
+      &lt;option value=&quot;Firefox&quot;&gt;&lt;/option&gt;
+      &lt;option value=&quot;Internet Explorer&quot;&gt;&lt;/option&gt;
+      &lt;option value=&quot;Opera&quot;&gt;&lt;/option&gt;
+      &lt;option value=&quot;Safari&quot;&gt;&lt;/option&gt;
+      &lt;option value=&quot;Microsoft Edge&quot;&gt;&lt;/option&gt;
+    &lt;/datalist&gt;
+  &lt;/label&gt;
+  &lt;label&gt;
+    Select
+    &lt;select&gt;
+      &lt;option value=&quot;Option 1&quot;&gt;Nord&lt;/option&gt;
+      &lt;option value=&quot;Option 2&quot;&gt;South&lt;/option&gt;
+      &lt;option value=&quot;Option 3&quot;&gt;East&lt;/option&gt;
+      &lt;option value=&quot;Option 3&quot;&gt;West&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/label&gt;
+  &lt;label&gt;
+    MultiSelect
+    &lt;select multiple&gt;
+      &lt;option value=&quot;Option 1&quot;&gt;Nord&lt;/option&gt;
+      &lt;option value=&quot;Option 2&quot;&gt;South&lt;/option&gt;
+      &lt;option value=&quot;Option 3&quot;&gt;East&lt;/option&gt;
+      &lt;option value=&quot;Option 3&quot;&gt;West&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/label&gt;
+  &lt;label&gt;
+    Textarea
+    &lt;textarea placeholder=&quot;Hi Dave &mldr;&quot;&gt;&lt;/textarea&gt;
+  &lt;/label&gt;
+  &lt;label&gt;
+    &lt;input type=&quot;checkbox&quot; /&gt; Checkbox input
+  &lt;/label&gt;
+  &lt;label&gt; &lt;input type=&quot;radio&quot; /&gt; Radio input &lt;/label&gt;
+  &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt; &lt;button&gt;Cancel&lt;/button&gt;
+&lt;/fieldset&gt;</code>
+          </pre>
+        </aside>
       </section>
       <hr />
 
       <section id="media">
         <h5>Image & figure</h5>
-        <img src="https://placekitten.com/408/287" alt="Example kitten" />
-        <figure>
-          <img src="https://placekitten.com/408/287" alt="Example kitten" />
-          <figcaption>Some kittens in a figure</figcaption>
-        </figure>
-        <h5>Video & Audio</h5>
-        <video
-          id="video"
-          controls="controls"
-          preload="none"
-          width="600"
-          poster="http://media.w3.org/2010/05/sintel/poster.png"
-        >
-          <source
-            id="mp4"
-            src="http://media.w3.org/2010/05/sintel/trailer.mp4"
-            type="video/mp4"
-          />
-          <source
-            id="webm"
-            src="http://media.w3.org/2010/05/sintel/trailer.webm"
-            type="video/webm"
-          />
-          <source
-            id="ogv"
-            src="http://media.w3.org/2010/05/sintel/trailer.ogv"
-            type="video/ogg"
-          />
+        <aside>
+          <div>
+            <img src="https://placekitten.com/408/287" alt="Example kitten" />
+            <figure>
+              <img src="https://placekitten.com/408/287" alt="Example kitten" />
+              <figcaption>Some kittens in a figure</figcaption>
+            </figure>
+          </div>
+          <pre>
+            <code>&lt;img src=&quot;https://placekitten.com/408/287&quot; alt=&quot;Example kitten&quot; /&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://placekitten.com/408/287&quot; alt=&quot;Example kitten&quot; /&gt;
+  &lt;figcaption&gt;Some kittens in a figure&lt;/figcaption&gt;
+&lt;/figure&gt;</code>
+          </pre>
+        </aside>
 
-          Your browser does not support the <code>video</code> element.
-        </video>
-        <audio controls>
-          <source
-            src="https://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg"
-            type="audio/ogg"
-          />
-          <source
-            src="http://www.noiseaddicts.com/samples_1w72b820/2514.mp3"
-            type="audio/mpeg"
-          />
-          Your browser does not support the <code>audio</code> element.
-        </audio>
+        <h5>Video & Audio</h5>
+        <aside>
+          <div>
+            <video
+              controls
+              preload="none"
+              poster="http://media.w3.org/2010/05/sintel/poster.png"
+            >
+              <source
+                id="mp4"
+                src="http://media.w3.org/2010/05/sintel/trailer.mp4"
+                type="video/mp4"
+              />
+              <source
+                id="webm"
+                src="http://media.w3.org/2010/05/sintel/trailer.webm"
+                type="video/webm"
+              />
+              <source
+                id="ogv"
+                src="http://media.w3.org/2010/05/sintel/trailer.ogv"
+                type="video/ogg"
+              />
+
+              Your browser does not support the <code>video</code> element.
+            </video>
+            <audio controls>
+              <source
+                src="https://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg"
+                type="audio/ogg"
+              />
+              <source
+                src="http://www.noiseaddicts.com/samples_1w72b820/2514.mp3"
+                type="audio/mpeg"
+              />
+              Your browser does not support the <code>audio</code> element.
+            </audio>
+          </div>
+          <pre>
+            <code>&lt;video
+  controls
+  preload=&quot;...&quot;
+  poster=&quot;...&quot;
+&gt;
+  &lt;source
+    id=&quot;...&quot;
+    src=&quot;...&quot;
+    type=&quot;...&quot;
+  /&gt;
+  Your browser does not support the &lt;code&gt;video&lt;/code&gt; element.
+&lt;/video&gt;
+
+&lt;audio controls&gt;
+  &lt;source
+    src=&quot;...&quot;
+    type=&quot;...&quot;
+  /&gt;
+  Your browser does not support the &lt;code&gt;audio&lt;/code&gt; element.
+&lt;/audio&gt;</code>
+          </pre>
+        </aside>
       </section>
       <hr />
 
       <section id="misc">
         <h5>Details</h5>
-        <details open>
-          <summary>Click to Hide...</summary>
-          <p>
-            The HTML Details Element (details) creates a disclosure widget in
-            which information is visible only when the widget is toggled into an
-            "open" state. A summary or label can be provided using the summary
-            element.
-          </p>
-        </details>
+        <aside>
+          <details open>
+            <summary>Click to Hide & Open...</summary>
+            <p>
+              The HTML Details Element (details) creates a disclosure widget in
+              which information is visible only when the widget is toggled into
+              an "open" state. A summary or label can be provided using the
+              summary element.
+            </p>
+          </details>
+          <pre>
+            <code>&lt;details open&gt;
+  &lt;summary&gt;Click to Hide &amp; Open...&lt;/summary&gt;
+  &lt;p&gt;
+    The HTML Details Element (details) creates a disclosure widget in
+    which information is visible only when the widget is toggled into an
+    &quot;open&quot; state. A summary or label can be provided using the summary
+    element.
+  &lt;/p&gt;
+&lt;/details&gt;</code>
+          </pre>
+        </aside>
         <h5>Tables</h5>
-        <p>
-          Be sure to use properly formed table markup with
-          <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> when
-          building a <code>table</code>.
-        </p>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Age</th>
-              <th>Sex</th>
-              <th>Location</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Dave Gamache</td>
-              <td>26</td>
-              <td>Male</td>
-              <td>San Francisco</td>
-            </tr>
-            <tr>
-              <td>Dwayne Johnson</td>
-              <td>42</td>
-              <td>Male</td>
-              <td>Hayward</td>
-            </tr>
-          </tbody>
-        </table>
-        <h5>Header</h5>
-        <header>
-          <h5>My App</h5>
-          <button>Menu</button>
-        </header>
-        <h5>Footer</h5>
-        <footer>
-          <p>Some copyright...</p>
-        </footer>
+        <aside>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dave Gamache</td>
+                <td>26</td>
+                <td>Male</td>
+                <td>San Francisco</td>
+              </tr>
+              <tr>
+                <td>Dwayne Johnson</td>
+                <td>42</td>
+                <td>Male</td>
+                <td>Hayward</td>
+              </tr>
+            </tbody>
+          </table>
+          <pre>
+            <code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Age&lt;/th&gt;
+      &lt;th&gt;Sex&lt;/th&gt;
+      &lt;th&gt;Location&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dave Gamache&lt;/td&gt;
+      &lt;td&gt;26&lt;/td&gt;
+      &lt;td&gt;Male&lt;/td&gt;
+      &lt;td&gt;San Francisco&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dwayne Johnson&lt;/td&gt;
+      &lt;td&gt;42&lt;/td&gt;
+      &lt;td&gt;Male&lt;/td&gt;
+      &lt;td&gt;Hayward&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code>
+          </pre>
+        </aside>
+        <h5>Header & Footer</h5>
+        <aside>
+          <div>
+            <header>
+              <h5>My App</h5>
+              <button>Menu</button>
+            </header>
+            ...Content...
+            <footer>
+              <p>Some copyright...</p>
+            </footer>
+          </div>
+          <pre>
+            <code>&lt;header&gt;
+  &lt;h5&gt;My App&lt;/h5&gt;
+  &lt;button&gt;Menu&lt;/button&gt;
+&lt;/header&gt;
+...Content...
+&lt;footer&gt;
+  &lt;p&gt;Some copyright...&lt;/p&gt;
+&lt;/footer&gt;</code>
+          </pre>
+        </aside>
       </section>
     </main>
   </body>
