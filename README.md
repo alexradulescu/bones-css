@@ -13,7 +13,7 @@ Simply copy&paste the following code in the `<head>` of your `index.html`
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@alex.radulescu/bones-css@0.6.5/dist/bones.1f308423.css"
+  href="https://cdn.jsdelivr.net/npm/@alex.radulescu/bones-css@0.6.6/dist/bones.0a1299eb.css"
 />
 ```
 
