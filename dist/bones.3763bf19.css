@@ -128,6 +128,16 @@ var {
   font-style: normal;
 }
 
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: var(--blue);
+}
+a:hover,
+a:focus {
+  color: var(--blue-dark);
+}
+
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
@@ -393,16 +403,6 @@ button[type='submit']:hover:not(:disabled),
 button[type='submit']:focus:not(:disabled) {
   background-color: var(--blue);
   border-color: var(--blue);
-}
-
-/* Links
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-a {
-  color: var(--blue);
-}
-a:hover,
-a:focus {
-  color: var(--blue-dark);
 }
 
 nav {
