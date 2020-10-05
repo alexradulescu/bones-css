@@ -1,5 +1,5 @@
 /*
-* Bones CSS V0.6.4
+* Bones CSS V0.6.5
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 */
@@ -28,9 +28,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
   --white: #fff;
-  --black: #000;
 
-  --grey-50: #fcfcfc;
   --grey-100: #f4f4f4;
   --grey-200: #e7e7e7;
   --grey-300: #d4d4d5;
@@ -64,28 +62,25 @@
 
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* html is set to 10px so that all the REM measurements throughout Bones
-are based on 10 sizing. So basically 1.5rem = 15px :) */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 html {
-  font-size: 10px;
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 body {
-  font-size: 1.6rem;
+  font-size: 16px;
   line-height: 1.6;
   font-weight: 400;
   font-family: var(--sans-font-family);
-  color: var(--grey-800);
+  color: var(--grey-900);
   background-color: var(--white);
-  max-width: 96rem;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 0 2.4rem;
+  padding: 0 24px;
 }
 
 /* Grid
@@ -93,11 +88,11 @@ body {
 aside {
   display: -ms-grid;
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 10px;
 }
 @media all and (min-width: 640px) {
   aside {
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   }
 }
 
@@ -109,18 +104,9 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1.6rem;
-  margin-bottom: 1.2rem;
-  font-weight: 300;
-  color: var(--grey-900);
-}
-h5 {
-  font-size: 1.4rem;
-  font-weight: 400;
-}
-h6 {
-  font-size: 1.2rem;
-  font-weight: 400;
+  margin-top: 16px;
+  margin-bottom: 12px;
+  font-weight: 500;
 }
 
 var {
@@ -154,7 +140,7 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 0.8rem 0 0.8rem 2.4rem;
+  margin: 8px 0 8px 24px;
   font-size: 90%;
 }
 
@@ -162,19 +148,19 @@ dl {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  padding: 0.8rem 0;
+  padding: 8px 0;
 }
 dl:not(:last-of-type) {
   border-bottom: 1px solid var(--grey-400);
 }
 dl:last-of-type {
-  margin-bottom: 2.4rem;
+  margin-bottom: 24px;
 }
 dd {
   text-align: right;
 }
 dt + dd {
-  margin-left: 0.8rem;
+  margin-left: 8px;
 }
 
 /* Badges
@@ -185,11 +171,11 @@ mark,
 ins,
 del,
 samp {
-  padding: 0.2rem 0.5rem;
-  margin: 0 0.2rem;
+  padding: 2px 6px;
+  margin: 0 2px;
   font-size: 85%;
   white-space: nowrap;
-  border-radius: 0.4rem;
+  border-radius: 4px;
   text-decoration: none;
   font-family: var(--mono-font-family);
 }
@@ -225,12 +211,12 @@ pre {
 }
 pre > * {
   display: block;
-  padding: 1rem 1.5rem;
+  padding: 10px 15px;
   white-space: normal;
   border-left: 3px solid currentColor;
 }
 pre > code {
-  border-color: var(--black);
+  border-color: var(--grey-900);
   white-space: pre-wrap;
 }
 pre > * > * {
@@ -241,9 +227,9 @@ pre > * > * {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 fieldset {
   border: 1px solid var(--grey-400);
-  border-radius: 0.6rem;
+  border-radius: 6px;
   margin: 0;
-  padding: 0.8rem 1.6rem 1.6rem 1.6rem;
+  padding: 8px 16px 16px 16px;
 }
 
 label:not([for]) input:not([type='checkbox']):not([type='radio']),
@@ -255,14 +241,10 @@ label:not([for]) textarea {
 label:not([for]),
 legend {
   display: block;
-  margin-bottom: 0.4rem;
+  margin-bottom: 4px;
   padding: 0;
 }
 
-/* 1. From normalize.css */
-input {
-  font-size: 10px; /* 1 */
-}
 button,
 input,
 optgroup,
@@ -280,15 +262,15 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 3.8rem;
-  line-height: 3.8rem;
-  padding: 0 1.2rem;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 12px;
   background-color: var(--white);
   border: 1px solid var(--grey-500);
-  margin-bottom: 1.2rem;
-  border-radius: 0.6rem;
+  margin-bottom: 12px;
+  border-radius: 6px;
   box-shadow: none;
-  min-width: 21rem;
+  min-width: 210px;
 }
 input:disabled,
 select:disabled,
@@ -299,10 +281,10 @@ textarea:disabled {
 }
 textarea,
 select[multiple] {
-  min-height: 7.2rem;
+  min-height: 72px;
   line-height: 1.6;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 input:hover,
 textarea:hover,
@@ -319,14 +301,14 @@ button:focus {
 }
 select:not([multiple]) {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath d='M10.193 3.97a.75.75 0 0 1 1.062 1.062L6.53 9.756a.75.75 0 0 1-1.06 0L.745 5.032A.75.75 0 0 1 1.807 3.97L6 8.163l4.193-4.193z' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
-  background-position: calc(100% - 1.6rem) center;
+  background-position: calc(100% - 16px) center;
   background-repeat: no-repeat;
 }
 
 input[type='checkbox'],
 input[type='radio'] {
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 18px;
+  height: 18px;
   cursor: pointer;
   padding: 0;
   margin-bottom: 0;
@@ -345,8 +327,8 @@ input[type='radio'] {
 }
 input[type='radio']:before {
   content: '';
-  width: 0.8rem;
-  height: 0.8rem;
+  width: 8px;
+  height: 8px;
   background-color: var(--white);
   position: absolute;
   top: 4px;
@@ -355,8 +337,8 @@ input[type='radio']:before {
 }
 input[type='checkbox']:before {
   content: '';
-  width: 1.4rem;
-  height: 0.7rem;
+  width: 14px;
+  height: 7px;
   transform: rotate(-50deg);
   border-left: 2px solid var(--white);
   border-bottom: 2px solid var(--white);
@@ -380,7 +362,7 @@ input[type='radio']:checked:hover {
 button {
   color: var(--blue);
   white-space: nowrap;
-  border-radius: 0.6rem;
+  border-radius: 6px;
   border: 1px solid var(--grey-200);
   background-color: var(--grey-100);
   cursor: pointer;
@@ -401,6 +383,7 @@ button[type='submit'] {
 }
 button[type='submit']:hover:not(:disabled),
 button[type='submit']:focus:not(:disabled) {
+  color: var(--white);
   background-color: var(--blue);
   border-color: var(--blue);
 }
@@ -417,10 +400,10 @@ nav > a {
   text-decoration: none;
   white-space: nowrap;
   background-color: var(--grey-100);
-  border-radius: 0.6rem;
+  border-radius: 6px;
   line-height: 1.15;
-  font-size: 1.6rem;
-  padding: 0.8rem 1.6rem;
+  font-size: 16px;
+  padding: 8px 16px;
 }
 nav > a:hover,
 nav > a:focus {
@@ -435,32 +418,26 @@ nav > a:focus {
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 table {
-  width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
 }
 th,
 td {
-  padding: 0.6rem 0.8rem;
+  padding: 6px 8px;
   text-align: left;
-  border-bottom: 1px solid var(--grey-400);
-  border-right: 1px solid var(--grey-400);
 }
 th {
-  color: var(--grey-700);
   font-weight: 600;
+  border-bottom: 2px solid var(--grey-300);
 }
-th:first-child,
-td:first-child {
-  border-left: 1px solid var(--grey-400);
-}
-tr:first-child th {
-  border-top: 1px solid var(--grey-400);
+tbody tr:nth-child(odd) {
+  background-color: var(--grey-100);
 }
 
 /* Hr
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
-  margin: 2.4rem 0;
+  margin: 24px 0;
   border-width: 0;
   border-top: 1px solid var(--grey-400);
 }
@@ -471,7 +448,7 @@ blockquote,
 q {
   border-left: 3px solid var(--grey-400);
   margin-left: 0;
-  padding-left: 2.4rem;
+  padding-left: 24px;
 }
 cite {
   display: block;
@@ -489,7 +466,7 @@ img,
 video,
 audio {
   max-width: 100%;
-  margin-bottom: 0.8rem;
+  margin-bottom: 8px;
 }
 video {
   display: block;
@@ -506,18 +483,18 @@ figcaption {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 header,
 footer {
-  padding: 0.8rem 0;
+  padding: 8px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 header {
   border-bottom: 1px solid var(--grey-400);
-  margin-bottom: 2.4rem;
+  margin-bottom: 24px;
 }
 footer {
   border-top: 1px solid var(--grey-400);
-  margin-top: 2.4rem;
+  margin-top: 24px;
 }
 header > *,
 footer > * {
@@ -531,8 +508,9 @@ details {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border: 1px solid var(--grey-400);
-  padding: 1.2rem 1.2rem 0;
+  border: 1px solid var(--grey-200);
+  background-color: var(--grey-100);
+  padding: 12px 12px 0;
   border-radius: 6px;
   overflow: hidden;
 }
@@ -540,31 +518,28 @@ details:focus-within {
   box-shadow: 0 0 0 3px var(--blue-light);
   outline: none;
 }
-details:hover {
-  border-color: var(--grey-500);
-}
 details[open] {
-  padding: 1.2rem;
+  padding: 12px;
 }
 details > :last-child {
   margin-bottom: 0;
-}
-details[open] summary {
-  margin-bottom: 1.2rem;
-  border-bottom: 1px solid var(--grey-400);
 }
 
 summary {
   display: list-item;
   cursor: pointer;
-  padding: 1.2rem;
-  margin: -1.2rem -1.2rem 0;
+  padding: 12px;
+  margin: -12px -12px 0;
+  color: var(--blue);
 }
-summary:focus {
+summary:focus,
+summary:hover {
   outline: none;
+  color: var(--blue-dark);
+  text-decoration: underline;
 }
-details:hover summary {
-  border-color: var(--grey-500);
+details[open] summary {
+  margin-bottom: 12px;
 }
 details > :not(summary) {
   margin-top: 0;
