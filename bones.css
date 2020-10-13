@@ -227,7 +227,7 @@ pre > * > * {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 fieldset {
   border: 1px solid var(--grey-400);
-  border-radius: 6px;
+  border-radius: 4px;
   margin: 0;
   padding: 8px 16px 16px 16px;
 }
@@ -253,7 +253,6 @@ textarea {
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
 }
 
 input,
@@ -268,7 +267,7 @@ select {
   background-color: var(--white);
   border: 1px solid var(--grey-500);
   margin-bottom: 12px;
-  border-radius: 6px;
+  border-radius: 4px;
   box-shadow: none;
   min-width: 210px;
 }
@@ -419,10 +418,11 @@ nav > a:focus {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 table {
   max-width: 100%;
+  width: 100%;
   border-collapse: collapse;
 }
 thead > tr:last-child {
-  border-bottom: 2px solid var(--grey-300);
+  border-bottom: 2px solid var(--grey-200);
 }
 th,
 td {
