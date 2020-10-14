@@ -1,6 +1,6 @@
 {
   "name": "@alex.radulescu/bones-css",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Simple, Beautiful, Lightweight, CSS boilerplate for prototypes",
   "homepage": "https://github.com/alexradulescu/bones-css#readme",
   "author": "Alex Radulescu",
@@ -34,5 +34,5 @@
     "./dist/*",
     "dist/*"
   ],
-  "jsdelivr": "./dist/bones.0486ca22.css"
+  "jsdelivr": "./dist/bones.f8c889a0.css"
 }
