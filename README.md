@@ -6,17 +6,6 @@ Simple, Beautiful, Lightweight, CSS boilerplate for prototypes
 
 [Homepage, documentation, examples](https://alexradulescu.github.io/bones-css/)
 
-## How to use it
-
-Simply copy&paste the following code in the `<head>` of your `index.html`
-
-```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@alex.radulescu/bones-css@0.6.7/dist/bones.e3b56164.css"
-/>
-```
-
 ### What and why
 
 Bones is lightweight and simple. It styles only raw HTML elements (some of the quite creativey). Nothing more.

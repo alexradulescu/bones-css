@@ -67,7 +67,7 @@
         Copy&Paste the following code in the <code>&lt;head&gt;</code> of your
         <samp>index.html</samp>
         <pre><code>
-&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@alex.radulescu/bones-css@0.6.7/dist/bones.e3b56164.css" /&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@alex.radulescu/bones-css@0.7.0/dist/bones.0486ca22.css" /&gt;
         </code></pre>
         <p>
           If you like Bones, feel free to
@@ -335,6 +335,11 @@
             </p>
             <input type="search" placeholder="Search..." />
             <button>Find</button>
+            <div>
+              <input type="text" disabled value="Disabled" />
+              <input type="text" readonly value="Read-only" />
+              <button disabled>Disabled</button>
+            </div>
           </div>
           <pre>
             <code>&lt;input type=&quot;search&quot; placeholder=&quot;Search...&quot; /&gt; &lt;button&gt;Find&lt;/button&gt;</code>
@@ -556,7 +561,8 @@
       <section id="misc">
         <h3>Details</h3>
         <aside>
-          <div><details>
+          <div>
+            <details>
               <summary>Click to Hide & Open...</summary>
               <p>
                 The HTML Details Element (details) creates a disclosure widget

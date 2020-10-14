@@ -1,5 +1,5 @@
 /*
-* Bones CSS V0.6.5
+* Bones CSS V0.7.0
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 */
@@ -29,35 +29,38 @@
 :root {
   --white: #fff;
 
-  --grey-100: #f4f4f4;
-  --grey-200: #e7e7e7;
-  --grey-300: #d4d4d5;
-  --grey-400: #cbd5e0;
-  --grey-500: #a3a2a8;
-  --grey-600: #6e6e76;
-  --grey-700: #403f45;
-  --grey-800: #2f2e33;
-  --grey-900: #1d1d1f;
+  --grey-100: #f4f5f7;
+  --grey-200: #ebecf0;
+  --grey-300: #dfe1e6;
+  --grey-400: #c1c7d0;
+  --grey-500: #a5adba;
+  --grey-600: #6b778c;
+  --grey-700: #42526e;
+  --grey-800: #253858;
+  --grey-900: #091e42;
 
-  --blue-white: #e3f2fd;
-  --blue-light: #bbdefb;
-  --blue: #1976d2;
-  --blue-dark: #1565c0;
+  --blue-white: #deebff;
+  --blue-light: #b3d4ff;
+  --blue-medium: #2684ff;
+  --blue: #0065ff;
+  --blue-dark: #0052cc;
 
-  --yellow-light: #fef1cc;
-  --yellow-dark: #91400e;
+  --yellow-light: #fffae6;
+  --yellow-dark: #ff8b00;
 
-  --green-light: #e8f5e9;
-  --green-dark: #1b5e20;
+  --green-light: #e3fcef;
+  --green-dark: #006644;
 
-  --red-light: #ffebee;
-  --red-dark: #b71c1c;
+  --red-light: #ffebe6;
+  --red-dark: #bf2600;
 
-  --sans-font-family: system-ui, -apple-system, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --mono-font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-    'Courier New', monospace;
+  --sans-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --mono-font-family: 'SFMono-Medium', 'SF Mono', 'Segoe UI Mono', 'Roboto Mono',
+    'Ubuntu Mono', Menlo, Consolas, Courier, monospace;
+
+  --radius-small: 3px;
+  --radius: 4px;
 }
 
 /* Base Styles
@@ -74,10 +77,8 @@ html {
 body {
   font-size: 16px;
   line-height: 1.6;
-  font-weight: 400;
   font-family: var(--sans-font-family);
   color: var(--grey-900);
-  background-color: var(--white);
   max-width: 960px;
   margin: 0 auto;
   padding: 0 24px;
@@ -104,8 +105,6 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 16px;
-  margin-bottom: 12px;
   font-weight: 500;
 }
 
@@ -148,10 +147,10 @@ dl {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  padding: 8px 0;
+  padding: 8px;
 }
-dl:not(:last-of-type) {
-  border-bottom: 1px solid var(--grey-400);
+dl:nth-child(even) {
+  background-color: var(--grey-100);
 }
 dl:last-of-type {
   margin-bottom: 24px;
@@ -175,14 +174,14 @@ samp {
   margin: 0 2px;
   font-size: 85%;
   white-space: nowrap;
-  border-radius: 4px;
+  border-radius: var(--radius-small);
   text-decoration: none;
   font-family: var(--mono-font-family);
 }
 
 code {
   color: var(--grey-100);
-  background-color: var(--grey-700);
+  background-color: var(--grey-800);
 }
 kbd {
   color: var(--blue);
@@ -201,7 +200,7 @@ del {
   background-color: var(--red-light);
 }
 samp {
-  color: var(--grey-900);
+  color: var(--grey-800);
   background-color: var(--grey-100);
 }
 
@@ -226,8 +225,8 @@ pre > * > * {
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 fieldset {
-  border: 1px solid var(--grey-400);
-  border-radius: 4px;
+  border: 1px solid var(--grey-300);
+  border-radius: var(--radius);
   margin: 0;
   padding: 8px 16px 16px 16px;
 }
@@ -264,19 +263,20 @@ select {
   height: 38px;
   line-height: 38px;
   padding: 0 12px;
-  background-color: var(--white);
-  border: 1px solid var(--grey-500);
+  background-color: var(--grey-100);
+  border: 1px solid var(--grey-400);
   margin-bottom: 12px;
-  border-radius: 4px;
+  border-radius: var(--radius);
   box-shadow: none;
-  min-width: 210px;
 }
 input:disabled,
 select:disabled,
 button:disabled,
 textarea:disabled {
+  background-color: var(--grey-200);
+  border: 1px solid var(--grey-200);
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.66;
 }
 textarea,
 select[multiple] {
@@ -285,17 +285,18 @@ select[multiple] {
   padding-top: 8px;
   padding-bottom: 8px;
 }
-input:hover,
-textarea:hover,
-select:hover {
-  border: 1px solid var(--grey-600);
+input:not(:disabled):hover,
+textarea:not(:disabled):hover,
+select:not(:disabled):hover {
+  border: 1px solid var(--blue-medium);
 }
 input:focus,
 textarea:focus,
 select:focus,
 button:focus {
-  border: 1px solid var(--grey-600);
-  box-shadow: 0 0 0 3px var(--blue-light);
+  background-color: var(--white);
+  border: 1px solid var(--blue-medium);
+  box-shadow: 0 0 0 1px var(--blue-medium);
   outline: 0;
 }
 select:not([multiple]) {
@@ -313,13 +314,14 @@ input[type='radio'] {
   margin-bottom: 0;
   transform: translateY(3px);
   min-width: initial;
+  color: transparent;
 }
 input[type='checkbox']:hover,
 input[type='radio']:hover {
-  border: 1px solid var(--grey-600);
+  border: 1px solid var(--blue-medium);
 }
 input[type='checkbox'] {
-  border-radius: 3px;
+  border-radius: var(--radius-small);
 }
 input[type='radio'] {
   border-radius: 50%;
@@ -328,7 +330,7 @@ input[type='radio']:before {
   content: '';
   width: 8px;
   height: 8px;
-  background-color: var(--white);
+  background-color: currentColor;
   position: absolute;
   top: 4px;
   left: 4px;
@@ -339,8 +341,8 @@ input[type='checkbox']:before {
   width: 14px;
   height: 7px;
   transform: rotate(-50deg);
-  border-left: 2px solid var(--white);
-  border-bottom: 2px solid var(--white);
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
   position: absolute;
   top: 3px;
   left: 1px;
@@ -349,6 +351,7 @@ input[type='checkbox']:checked,
 input[type='radio']:checked {
   background-color: var(--blue);
   border: 1px solid var(--blue);
+  color: var(--white);
 }
 input[type='checkbox']:checked:hover,
 input[type='radio']:checked:hover {
@@ -361,8 +364,8 @@ input[type='radio']:checked:hover {
 button {
   color: var(--blue);
   white-space: nowrap;
-  border-radius: 6px;
-  border: 1px solid var(--grey-200);
+  border-radius: var(--radius);
+  border: 1px solid var(--grey-300);
   background-color: var(--grey-100);
   cursor: pointer;
   padding: 0.5em 1em;
@@ -399,7 +402,7 @@ nav > a {
   text-decoration: none;
   white-space: nowrap;
   background-color: var(--grey-100);
-  border-radius: 6px;
+  border-radius: var(--radius);
   line-height: 1.15;
   font-size: 16px;
   padding: 8px 16px;
@@ -420,19 +423,16 @@ table {
   max-width: 100%;
   width: 100%;
   border-collapse: collapse;
-}
-thead > tr:last-child {
-  border-bottom: 2px solid var(--grey-200);
+  border: 1px solid var(--grey-300);
 }
 th,
 td {
   padding: 6px 8px;
   text-align: left;
+  border: 1px solid var(--grey-300);
 }
 th {
   font-weight: 600;
-}
-tbody tr:nth-child(odd) {
   background-color: var(--grey-100);
 }
 
@@ -448,7 +448,7 @@ hr {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 blockquote,
 q {
-  border-left: 3px solid var(--grey-400);
+  border-left: 3px solid var(--grey-300);
   margin-left: 0;
   padding-left: 24px;
 }
@@ -491,11 +491,11 @@ footer {
   align-items: center;
 }
 header {
-  border-bottom: 1px solid var(--grey-400);
+  border-bottom: 2px solid var(--grey-200);
   margin-bottom: 24px;
 }
 footer {
-  border-top: 1px solid var(--grey-400);
+  border-top: 2px solid var(--grey-200);
   margin-top: 24px;
 }
 header > *,
@@ -507,14 +507,14 @@ footer > * {
 /* Details & summary
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 details {
-  border: 1px solid var(--grey-200);
-  background-color: var(--grey-100);
+  border: 1px solid var(--grey-300);
   padding: 12px 12px 0;
-  border-radius: 6px;
+  border-radius: var(--radius);
   margin: 12px 0;
 }
 details:focus-within {
-  box-shadow: 0 0 0 3px var(--blue-light);
+  border-color: var(--blue-medium);
+  box-shadow: 0 0 0 1px var(--blue-medium);
   outline: none;
 }
 details[open] {
@@ -529,16 +529,13 @@ summary {
   cursor: pointer;
   padding: 12px;
   margin: -12px -12px 0;
-  color: var(--blue);
+  color: var(--blue-dark);
 }
 summary:focus,
 summary:hover {
   outline: none;
-  color: var(--blue-dark);
+  color: var(--blue);
   text-decoration: underline;
-}
-details[open] summary {
-  margin-bottom: 12px;
 }
 details > :not(summary) {
   margin-top: 0;
