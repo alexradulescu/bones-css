@@ -520,6 +520,7 @@ summary {
 summary:focus,
 summary:hover {
   text-decoration: underline;
+  outline: none;
 }
 details > :not(summary) {
   margin-top: 0;
