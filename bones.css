@@ -254,6 +254,7 @@ textarea {
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
+  transition: all 0.225s;
 }
 
 input,
@@ -514,12 +515,10 @@ summary {
   cursor: pointer;
   padding: 12px;
   margin: -12px -12px 0;
-  color: var(--blue-dark);
+  color: var(--blue);
 }
 summary:focus,
 summary:hover {
-  outline: none;
-  color: var(--blue);
   text-decoration: underline;
 }
 details > :not(summary) {
