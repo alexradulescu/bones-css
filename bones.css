@@ -32,15 +32,11 @@
   --grey-100: #f4f5f7;
   --grey-200: #ebecf0;
   --grey-300: #dfe1e6;
-  --grey-400: #c1c7d0;
-  --grey-500: #a5adba;
-  --grey-600: #6b778c;
   --grey-700: #42526e;
   --grey-800: #253858;
   --grey-900: #091e42;
 
-  --blue-white: #deebff;
-  --blue-light: #b3d4ff;
+  --blue-light: #deebff;
   --blue-medium: #2684ff;
   --blue: #0065ff;
   --blue-dark: #0052cc;
@@ -106,6 +102,11 @@ h4,
 h5,
 h6 {
   font-weight: 500;
+  max-width: 68ch;
+}
+
+p {
+  max-width: 68ch;
 }
 
 var {
@@ -121,6 +122,7 @@ a {
 a:hover,
 a:focus {
   color: var(--blue-dark);
+  outline-color: currentColor;
 }
 
 /* Lists
@@ -185,7 +187,7 @@ code {
 }
 kbd {
   color: var(--blue);
-  background-color: var(--blue-white);
+  background-color: var(--blue-light);
 }
 mark {
   color: var(--yellow-dark);
@@ -261,10 +263,9 @@ select {
   -moz-appearance: none;
   appearance: none;
   height: 38px;
-  line-height: 38px;
   padding: 0 12px;
   background-color: var(--grey-100);
-  border: 1px solid var(--grey-400);
+  border: 2px solid var(--grey-300);
   margin-bottom: 12px;
   border-radius: var(--radius);
   box-shadow: none;
@@ -274,7 +275,7 @@ select:disabled,
 button:disabled,
 textarea:disabled {
   background-color: var(--grey-200);
-  border: 1px solid var(--grey-200);
+  border: 2px solid var(--grey-200);
   cursor: not-allowed;
   opacity: 0.66;
 }
@@ -288,15 +289,15 @@ select[multiple] {
 input:not(:disabled):hover,
 textarea:not(:disabled):hover,
 select:not(:disabled):hover {
-  border: 1px solid var(--blue-medium);
+  border: 2px solid var(--blue-medium);
 }
 input:focus,
 textarea:focus,
 select:focus,
 button:focus {
   background-color: var(--white);
-  border: 1px solid var(--blue-medium);
-  box-shadow: 0 0 0 1px var(--blue-medium);
+  border: 2px solid var(--blue-medium);
+  /* box-shadow: 0 0 0 1px var(--blue-medium); */
   outline: 0;
 }
 select:not([multiple]) {
@@ -318,7 +319,7 @@ input[type='radio'] {
 }
 input[type='checkbox']:hover,
 input[type='radio']:hover {
-  border: 1px solid var(--blue-medium);
+  border: 2px solid var(--blue-medium);
 }
 input[type='checkbox'] {
   border-radius: var(--radius-small);
@@ -332,8 +333,8 @@ input[type='radio']:before {
   height: 8px;
   background-color: currentColor;
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 3px;
+  left: 3px;
   border-radius: 50%;
 }
 input[type='checkbox']:before {
@@ -344,37 +345,45 @@ input[type='checkbox']:before {
   border-left: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
   position: absolute;
-  top: 3px;
-  left: 1px;
+  top: 2px;
+  left: 0;
 }
 input[type='checkbox']:checked,
 input[type='radio']:checked {
   background-color: var(--blue);
-  border: 1px solid var(--blue);
+  border: 2px solid var(--blue);
   color: var(--white);
 }
 input[type='checkbox']:checked:hover,
 input[type='radio']:checked:hover {
   background-color: var(--blue-dark);
-  border: 1px solid var(--blue-dark);
+  border: 2px solid var(--blue-dark);
 }
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-button {
-  color: var(--blue);
+button,
+nav > a {
+  display: inline-flex;
+  text-align: center;
+  text-decoration: none;
   white-space: nowrap;
+  color: var(--blue);
+  background-color: var(--grey-200);
+  border: 2px solid var(--grey-200);
   border-radius: var(--radius);
-  border: 1px solid var(--grey-300);
-  background-color: var(--grey-100);
+  line-height: 1.15;
+  font-size: 16px;
+  padding: 7px 16px;
   cursor: pointer;
-  padding: 0.5em 1em;
 }
 button:hover:not(:disabled),
-button:focus:not(:disabled) {
+button:focus:not(:disabled),
+nav > a:hover,
+nav > a:focus {
   color: var(--blue-dark);
-  border: 1px solid var(--grey-200);
-  background-color: var(--grey-200);
+  border-color: var(--blue-medium);
+  background-color: var(--white);
   outline: 0;
 }
 
@@ -394,27 +403,7 @@ nav {
   white-space: nowrap;
   overflow: auto;
   max-width: 100%;
-  padding: 3px;
-}
-nav > a {
-  display: inline-flex;
-  text-align: center;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: var(--grey-100);
-  border-radius: var(--radius);
-  line-height: 1.15;
-  font-size: 16px;
-  padding: 8px 16px;
-}
-nav > a:hover,
-nav > a:focus {
-  background-color: var(--grey-200);
-}
-
-nav > a:focus {
-  box-shadow: 0 0 0 3px var(--blue-light);
-  outline: 0;
+  padding: 2px;
 }
 
 /* Tables
@@ -441,7 +430,7 @@ th {
 hr {
   margin: 24px 0;
   border-width: 0;
-  border-top: 1px solid var(--grey-400);
+  border-top: 1px solid var(--grey-300);
 }
 
 /* Quotes
@@ -455,7 +444,8 @@ q {
 cite {
   display: block;
   font-style: italic;
-  color: var(--grey-600);
+  color: var(--grey-700);
+  font-size: 90%;
 }
 
 /* Media
@@ -512,11 +502,6 @@ details {
   border-radius: var(--radius);
   margin: 12px 0;
 }
-details:focus-within {
-  border-color: var(--blue-medium);
-  box-shadow: 0 0 0 1px var(--blue-medium);
-  outline: none;
-}
 details[open] {
   padding: 12px;
 }
@@ -552,8 +537,7 @@ details > :not(summary) {
   }
 
   nav {
-    white-space: initial;
-    overflow: initial;
+    all: unset;
   }
 
   button,
@@ -562,9 +546,5 @@ details > :not(summary) {
   select,
   nav > a {
     border: 1px solid #000 !important;
-  }
-
-  a {
-    color: #00f !important;
   }
 }
