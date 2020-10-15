@@ -105,7 +105,10 @@ h6 {
   max-width: 68ch;
 }
 
-p {
+p,
+blockquote,
+q,
+li {
   max-width: 68ch;
 }
 
@@ -149,9 +152,10 @@ dl {
   display: flex;
   justify-content: space-between;
   margin: 0;
+  border-radius: var(--radius);
   padding: 8px;
 }
-dl:nth-child(even) {
+dl:nth-of-type(even) {
   background-color: var(--grey-100);
 }
 dl:last-of-type {
