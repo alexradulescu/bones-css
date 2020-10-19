@@ -1,5 +1,5 @@
 /*
-* Bones CSS V0.7.1
+* Bones CSS V0.9.3
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 */
@@ -171,7 +171,7 @@ dd {
   text-align: right;
 }
 dt + dd {
-  margin-left: 8px;
+  margin-left: 10px;
 }
 
 /* Badges
@@ -184,7 +184,7 @@ del,
 samp {
   padding: 2px 6px;
   margin: 0 2px;
-  font-size: 85%;
+  font-size: 90%;
   white-space: nowrap;
   border-radius: var(--radius-small);
   text-decoration: none;
@@ -231,7 +231,7 @@ pre > code {
   border-color: var(--grey-900);
   white-space: pre-wrap;
 }
-pre > * > * {
+pre * {
   color: currentColor;
 }
 
