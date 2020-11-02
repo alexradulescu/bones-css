@@ -77,6 +77,7 @@ body {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 16px;
+  font-variant-numeric: tabular-nums;
 }
 
 /* Grid
@@ -112,11 +113,6 @@ blockquote,
 q,
 li {
   max-width: 68ch;
-}
-
-var {
-  font-variant-numeric: tabular-nums;
-  font-style: normal;
 }
 
 /* Links
@@ -373,7 +369,7 @@ input[type='radio']:checked:hover {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
 nav > a {
-  display: inline-flex;
+  display: inline-block;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
