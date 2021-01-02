@@ -1,7 +1,7 @@
 {
   "name": "@alex.radulescu/bones-css",
-  "version": "0.9.5",
-  "description": "Simple, Beautiful, Lightweight, CSS boilerplate for prototypes",
+  "version": "0.10.0",
+  "description": "Simple, Elegant, Lightweight, CSS boilerplate",
   "homepage": "https://github.com/alexradulescu/bones-css#readme",
   "author": "Alex Radulescu",
   "keywords": [
@@ -22,8 +22,8 @@
     "build": "parcel build ./index.html"
   },
   "devDependencies": {
-    "parcel": "^2.0.0-beta.1",
-    "prettier": "2.1.2"
+    "parcel": "next",
+    "prettier": "2.2.1"
   },
   "dependencies": {},
   "browserslist": [
@@ -34,5 +34,5 @@
     "./dist/*",
     "dist/*"
   ],
-  "jsdelivr": "./dist/bones.8102e8f1.css"
+  "jsdelivr": "./dist/bones.7203b13b.css"
 }
