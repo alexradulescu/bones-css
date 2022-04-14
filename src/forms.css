@@ -1,0 +1,53 @@
+:root {
+  --actor-min-height: 36px;
+  --small-actor-min-height: 16px;
+}
+
+input,
+button,
+textarea,
+select {
+  all: unset;
+  cursor: pointer;
+  border: 1px solid currentColor;
+}
+
+:where(input, button, textarea, select):focus {
+  outline: 2px solid dodgerblue;
+  outline-offset: 2px;
+}
+
+input:not([type='submit'], [type='button'], [type='checkbox'], [type='radio'], [type='range'], [type='meter']) {
+  height: var(--actor-min-height);
+  min-width: calc(var(--actor-min-height) * 3);
+  border-radius: 6px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+}
+
+input:where([type='checkbox'], [type='radio']) {
+  height: var(--small-actor-min-height);
+  width: var(--small-actor-min-height);
+  border-radius: 6px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button,
+input:where([type='submit'], [type='button']) {
+  height: var(--actor-min-height);
+  min-width: calc(var(--actor-min-height) - 24px);
+  border-radius: 6px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+}
+
+:where(input, select, button, textarea):disabled {
+  cursor: not-allowed;
+  opacity: 0.66;
+}
