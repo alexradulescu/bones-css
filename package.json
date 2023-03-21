@@ -18,12 +18,13 @@
   "scripts": {
     "prestart": "rm -rf dist",
     "start": "parcel serve ./index.html",
+    "start-demo": "parcel serve ./demo.html",
     "prebuild": "rm -rf dist",
     "build": "parcel build ./index.html"
   },
   "devDependencies": {
-    "parcel": "2.8.2",
-    "prettier": "2.8.3"
+    "parcel": "2.8.3",
+    "prettier": "2.8.4"
   },
   "dependencies": {},
   "browserslist": [

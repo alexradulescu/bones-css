@@ -1,0 +1,172 @@
+/*
+* Soul css V0.1
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+
+:root {
+  --font-serif: 'EB Garamond', serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --blue-1: #ddf4ff;
+  --blue-2: #b6e3ff;
+  --blue-3: #80ccff;
+  --blue-4: #54aeff;
+  --blue-5: #218bff;
+  --blue-6: #0969da;
+  --blue-7: #0550ae;
+  --blue-8: #033d8b;
+  --blue-9: #0a3069;
+  --blue-10: #002155;
+  --blue-11: #001740;
+  --blue-12: #000d2b;
+
+  --grey-1: #f8f9fb;
+  --grey-2: #eceff3;
+  --grey-3: #d2d9df;
+  --grey-4: #b1b9c2;
+  --grey-5: #8d96a0;
+  --grey-6: #6f7882;
+  --grey-7: #58616b;
+  --grey-8: #434b54;
+  --grey-9: #333940;
+  --grey-10: #252a30;
+  --grey-11: #181c20;
+  --grey-12: #0e1114;
+
+  --color-dark: #0e1114;
+  --color-light: #f8f9fb;
+  --color-link: var(--blue-5);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  /* margin: 0; */
+  line-height: calc(1em + 0.5rem);
+  font-family: var(--font-sans);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: tabular-nums;
+}
+
+a {
+  color: var(--blue-6);
+  padding: 0 2px;
+  text-decoration-style: dashed;
+  transition: all 0.25s ease-in-out;
+
+  &:not([href]) {
+    text-decoration: none;
+  }
+
+  &:where(:hover, :focus) {
+    outline-color: currentColor;
+    outline-offset: 3px;
+    background-color: var(--blue-1);
+    color: var(--blue-8);
+    text-decoration-style: solid;
+  }
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  text-wrap: balance;
+  max-width: 70ch;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+}
+
+h1 {
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--grey-3);
+}
+th,
+td {
+  padding: 6px 8px;
+  text-align: left;
+  border: 1px solid var(--grey-3);
+}
+th {
+  font-weight: 600;
+  background-color: var(--grey-1);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    background-color: #0e1114;
+    color: white;
+  }
+
+  a {
+    color: var(--blue-5);
+
+    &:where(:hover, :focus) {
+      background-color: var(--blue-11);
+      color: var(--blue-3);
+    }
+  }
+
+  table {
+    border: 1px solid var(--grey-10);
+  }
+  th,
+  td {
+    border: 1px solid var(--grey-10);
+  }
+  th {
+    background-color: var(--grey-11);
+  }
+} */

@@ -1,1 +1,331 @@
-<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title> Bones CSS - Simple, Beautiful, Lightweight, CSS boilerplate for prototypes </title><meta name="description" content><meta name="author" content><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"><link rel="stylesheet" href="/index.5e1fb636.css"><script async defer src="https://buttons.github.io/buttons.js"></script><script async defer data-domain="alexradulescu.github.io/bones-css" src="https://plausible.io/js/plausible.js"></script></head><body> <main> <dl> <h1>Bones CSS</h1> <nav> <a href="Documentation">Documentation</a> <a href="Github">Github</a> </nav> </dl> <h2>Documentation</h2> <p> Below is a large list of examples of almost all elements included in Bones. Feel free to explore or just copy&paste them to your need. </p> <nav> <a href="#grid">Grid & Container</a> <a href="#typography">Typography & Text</a> <a href="#forms">Forms & Buttons</a> <a href="#media">Media</a> <a href="#misc">Others</a> </nav> <hr> <section id="grid"> <h3>The grid</h3> <p> The grid is represented by the <code>aside</code> element. The first level of children inside it will be evenly distributed on desktop and tablet. </p> <aside> <samp>Equal width colum</samp> <samp>Equal width colum</samp> <samp>Equal width colum</samp> </aside> </section> <hr> <div id="typography"> <h3>Typography</h3> <h1>Heading 1</h1> <h2>Heading 2</h2> <h3>Heading 3</h3> <h4>Heading 4</h4> <h5>Heading 5</h5> <h6>Heading 6</h6> Type basics are all obviously included. <ul> <li> <a href="#">Links/Anchors</a> </li> <li> <strong>Strong/Bold</strong> </li> <li> <em>Italic/Emphasys</em> </li> <li><u>Underline</u></li> <li><s>Strikethrough</s></li> </ul> </div> <section> <h3>Lists</h3> <aside> <ul> <li>Unordered lists have basic styles</li> <li> They use the circle list style <ul> <li>Nested lists styled to feel right</li> <li>Can nest either type of list into the other</li> </ul> </li> <li>Just more list items mama san</li> </ul> </aside> <aside> <ol> <li>Ordered lists also have basic styles</li> <li> They use the decimal list style <ul> <li>Ordered and unordered can be nested</li> <li>Can nest either type of list into the other</li> </ul> </li> <li>Last list item just for the fun</li> </ol> </aside> </section> <section> <h3>Code/Badges/Alerts</h3> <p> Code styling is kept quote standard and we highjacked some other elements to create varieties of badges and alert boxes(badges wrapped in a <code>pre</code> element). </p> <aside> <ul> <li><kbd>Info/Keyboard</kbd></li> <li><code>Code</code></li> <li><mark>Marking</mark></li> <li><var>Var for monospaced: 1234567890</var></li> </ul> </aside> </section> <section> <h3>Blockquote</h3> <aside> <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"> 'The HTML blockquote Element (or HTML Block Quotation Element) indicates that the enclosed text is an extended quotation. Usually, this is rendered visually by indentation (see <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote#Usage_notes">Notes</a> for how to change it). A URL for the source of the quotation may be given using the <code>cite</code> attribute, while a text representation of the source can be given using the <code>&lt;cite&gt;</code> cite element.' <cite>MDN, 'The Block Quotation element'</cite> </blockquote> </aside> </section> <hr> <section id="forms"> <h3>Forms</h3> <p> Forms are a huge pain, but hopefully these styles make it a bit easier. All inputs, select, and buttons are normalized for a common height cross-browser so inputs can be stacked or placed alongside each other. </p> <aside> <div> <p> Solitary inputs (not in a form or label) get a default standardised size. </p> <input type="search" placeholder="Search..."> <button>Find</button> <div> <input type="text" disabled value="Disabled"> <input type="text" readonly value="Read-only"> <button disabled>Disabled</button> </div> </div> </aside> <p>Input elements within a form or fieldset get a full width</p> <aside> <div> <fieldset> <legend>A legend</legend> <label> Text Input <input type="text" placeholder="John James"> </label> <label> Email Input <input type="email" placeholder="john.james@mailbox.com"> </label> <label> Password Input <input type="password" placeholder="..."> </label> <label>Date Input<input type="date"> </label> <label>Month Input<input type="month"> </label> <label> Search Input <input type="search" placeholder="Search..."> </label> <label> Number Input <input type="number" placeholder="123234"> </label> <label> Datalist Input <input list="browsers" autocomplete="off" placeholder="Choose a browser"> <datalist id="browsers"> <option value="Chrome"></option> <option value="Firefox"></option> <option value="Internet Explorer"></option> <option value="Opera"></option> <option value="Safari"></option> <option value="Microsoft Edge"></option> </datalist> </label> <label> Select <select> <option value="Option 1">Nord</option> <option value="Option 2">South</option> <option value="Option 3">East</option> <option value="Option 3">West</option> </select> </label> <label> MultiSelect <select multiple> <option value="Option 1">Nord</option> <option value="Option 2">South</option> <option value="Option 3">East</option> <option value="Option 3">West</option> </select> </label> <label> Textarea <textarea placeholder="Hi Dave …"></textarea> </label> <label> <input type="checkbox"> Checkbox input</label> <label> <input type="radio"> Radio input</label> <aside> <button type="submit">Submit</button> <button>Cancel</button> </aside> <div> <button type="submit">Submit</button> <button>Cancel</button> </div> </fieldset> </div> </aside> </section> <hr> <section id="media"> <h3>Image & figure</h3> <aside> <div> <img src="https://placekitten.com/408/287" alt="Example kitten"> <figure> <img src="https://placekitten.com/408/287" alt="Example kitten"> <figcaption>Some kittens in a figure</figcaption> </figure> </div> </aside> <h3>Video & Audio</h3> <aside> <div> <video controls preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png"> <source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4"> <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm"> <source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg"> Your browser does not support the <code>video</code> element. </video> <audio controls> <source src="https://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" type="audio/ogg"> <source src="http://www.noiseaddicts.com/samples_1w72b820/2514.mp3" type="audio/mpeg"> Your browser does not support the <code>audio</code> element. </audio> </div> </aside> </section> <hr> <section id="misc"> <h3>Details</h3> <aside> <div> <details> <summary>Click to Hide & Open...</summary> <p> The HTML Details Element (details) creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state. A summary or label can be provided using the summary element. </p> </details> <details open> <summary>Click to Hide & Open...</summary> <p> The HTML Details Element (details) creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state. A summary or label can be provided using the summary element. </p> </details> </div> </aside> <h3>Tables</h3> <aside> <table> <thead> <tr> <th>Name</th> <th>Sex</th> <th>Location</th> <th>Worth</th> </tr> </thead> <tbody> <tr> <td>Dave Gamache</td> <td>Male</td> <td>San Francisco</td> <td>53,762,978.07 USD</td> </tr> <tr> <td>Dwayne Johnson</td> <td>Male</td> <td>Hayward</td> <td>134,046,727.87 USD</td> </tr> </tbody> </table> </aside> </section> </main> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+      Bones CSS - Simple, Beautiful, Lightweight, CSS boilerplate for prototypes
+    </title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+    <link rel="stylesheet" href="/index.9058581f.css">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+    <script async="" defer="" data-domain="alexradulescu.github.io/bones-css" src="https://plausible.io/js/plausible.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <dl>
+        <h1>Bones CSS</h1>
+        <nav>
+          <a href="Documentation">Documentation</a>
+          <a href="Github">Github</a>
+        </nav>
+      </dl>
+
+      <h2>Documentation</h2>
+      <p>
+        Below is a large list of examples of almost all elements included in
+        Bones. Feel free to explore or just copy&paste them to your need.
+      </p>
+      <nav>
+        <a href="#grid">Grid & Container</a>
+        <a href="#typography">Typography & Text</a>
+        <a href="#forms">Forms & Buttons</a>
+        <a href="#media">Media</a>
+        <a href="#misc">Others</a>
+      </nav>
+      <hr>
+
+      <section id="grid">
+        <h3>The grid</h3>
+        <p>
+          The grid is represented by the <code>aside</code> element. The first
+          level of children inside it will be evenly distributed on desktop and
+          tablet.
+        </p>
+        <aside>
+          <samp>Equal width colum</samp>
+          <samp>Equal width colum</samp>
+          <samp>Equal width colum</samp>
+        </aside>
+      </section>
+      <hr>
+
+      <div id="typography">
+        <h3>Typography</h3>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+
+        Type basics are all obviously included.
+        <ul>
+          <li>
+            <a href="#">Links/Anchors</a>
+          </li>
+          <li>
+            <strong>Strong/Bold</strong>
+          </li>
+          <li>
+            <em>Italic/Emphasys</em>
+          </li>
+          <li><u>Underline</u></li>
+          <li><s>Strikethrough</s></li>
+        </ul>
+      </div>
+
+      <section>
+        <h3>Lists</h3>
+        <aside>
+          <ul>
+            <li>Unordered lists have basic styles</li>
+            <li>
+              They use the circle list style
+              <ul>
+                <li>Nested lists styled to feel right</li>
+                <li>Can nest either type of list into the other</li>
+              </ul>
+            </li>
+            <li>Just more list items mama san</li>
+          </ul>
+        </aside>
+        <aside>
+          <ol>
+            <li>Ordered lists also have basic styles</li>
+            <li>
+              They use the decimal list style
+              <ul>
+                <li>Ordered and unordered can be nested</li>
+                <li>Can nest either type of list into the other</li>
+              </ul>
+            </li>
+            <li>Last list item just for the fun</li>
+          </ol>
+        </aside>
+      </section>
+
+      <section>
+        <h3>Code/Badges/Alerts</h3>
+        <p>
+          Code styling is kept quote standard and we highjacked some other
+          elements to create varieties of badges and alert boxes(badges wrapped
+          in a <code>pre</code> element).
+        </p>
+        <aside>
+          <ul>
+            <li><kbd>Info/Keyboard</kbd></li>
+            <li><code>Code</code></li>
+            <li><mark>Marking</mark></li>
+            <li><var>Var for monospaced: 1234567890</var></li>
+          </ul>
+        </aside>
+      </section>
+
+      <section>
+        <h3>Blockquote</h3>
+        <aside>
+          <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+            'The HTML blockquote Element (or HTML Block Quotation Element)
+            indicates that the enclosed text is an extended quotation. Usually,
+            this is rendered visually by indentation (see
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote#Usage_notes">Notes</a>
+            for how to change it). A URL for the source of the quotation may be
+            given using the <code>cite</code> attribute, while a text
+            representation of the source can be given using the
+            <code>&lt;cite&gt;</code> cite element.'
+            <cite>MDN, 'The Block Quotation element'</cite>
+          </blockquote>
+        </aside>
+      </section>
+      <hr>
+
+      <section id="forms">
+        <h3>Forms</h3>
+        <p>
+          Forms are a huge pain, but hopefully these styles make it a bit
+          easier. All inputs, select, and buttons are normalized for a common
+          height cross-browser so inputs can be stacked or placed alongside each
+          other.
+        </p>
+        <aside>
+          <div>
+            <p>
+              Solitary inputs (not in a form or label) get a default
+              standardised size.
+            </p>
+            <input type="search" placeholder="Search...">
+            <button>Find</button>
+            <div>
+              <input type="text" disabled="" value="Disabled">
+              <input type="text" readonly="" value="Read-only">
+              <button disabled="">Disabled</button>
+            </div>
+          </div>
+        </aside>
+        <p>Input elements within a form or fieldset get a full width</p>
+
+        <aside>
+          <div>
+            <fieldset>
+              <legend>A legend</legend>
+              <label>
+                Text Input
+                <input type="text" placeholder="John James">
+              </label>
+              <label>
+                Email Input
+                <input type="email" placeholder="john.james@mailbox.com">
+              </label>
+              <label>
+                Password Input
+                <input type="password" placeholder="...">
+              </label>
+              <label>Date Input<input type="date"> </label>
+              <label>Month Input<input type="month"> </label>
+              <label>
+                Search Input
+                <input type="search" placeholder="Search...">
+              </label>
+              <label>
+                Number Input
+                <input type="number" placeholder="123234">
+              </label>
+              <label>
+                Datalist Input
+                <input list="browsers" autocomplete="off" placeholder="Choose a browser">
+                <datalist id="browsers">
+                  <option value="Chrome"></option>
+                  <option value="Firefox"></option>
+                  <option value="Internet Explorer"></option>
+                  <option value="Opera"></option>
+                  <option value="Safari"></option>
+                  <option value="Microsoft Edge"></option>
+                </datalist>
+              </label>
+              <label>
+                Select
+                <select>
+                  <option value="Option 1">Nord</option>
+                  <option value="Option 2">South</option>
+                  <option value="Option 3">East</option>
+                  <option value="Option 3">West</option>
+                </select>
+              </label>
+              <label>
+                MultiSelect
+                <select multiple="">
+                  <option value="Option 1">Nord</option>
+                  <option value="Option 2">South</option>
+                  <option value="Option 3">East</option>
+                  <option value="Option 3">West</option>
+                </select>
+              </label>
+              <label>
+                Textarea
+                <textarea placeholder="Hi Dave …"></textarea>
+              </label>
+              <label> <input type="checkbox"> Checkbox input</label>
+              <label> <input type="radio"> Radio input</label>
+              <aside>
+                <button type="submit">Submit</button> <button>Cancel</button>
+              </aside>
+              <div>
+                <button type="submit">Submit</button> <button>Cancel</button>
+              </div>
+            </fieldset>
+          </div>
+        </aside>
+      </section>
+      <hr>
+
+      <section id="media">
+        <h3>Image & figure</h3>
+        <aside>
+          <div>
+            <img src="https://placekitten.com/408/287" alt="Example kitten">
+            <figure>
+              <img src="https://placekitten.com/408/287" alt="Example kitten">
+              <figcaption>Some kittens in a figure</figcaption>
+            </figure>
+          </div>
+        </aside>
+
+        <h3>Video & Audio</h3>
+        <aside>
+          <div>
+            <video controls="" preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
+              <source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+              <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm">
+              <source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg">
+
+              Your browser does not support the <code>video</code> element.
+            </video>
+            <audio controls="">
+              <source src="https://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" type="audio/ogg">
+              <source src="http://www.noiseaddicts.com/samples_1w72b820/2514.mp3" type="audio/mpeg">
+              Your browser does not support the <code>audio</code> element.
+            </audio>
+          </div>
+        </aside>
+      </section>
+      <hr>
+
+      <section id="misc">
+        <h3>Details</h3>
+        <aside>
+          <div>
+            <details>
+              <summary>Click to Hide & Open...</summary>
+              <p>
+                The HTML Details Element (details) creates a disclosure widget
+                in which information is visible only when the widget is toggled
+                into an "open" state. A summary or label can be provided using
+                the summary element.
+              </p>
+            </details>
+            <details open="">
+              <summary>Click to Hide & Open...</summary>
+              <p>
+                The HTML Details Element (details) creates a disclosure widget
+                in which information is visible only when the widget is toggled
+                into an "open" state. A summary or label can be provided using
+                the summary element.
+              </p>
+            </details>
+          </div>
+        </aside>
+        <h3>Tables</h3>
+        <aside>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Sex</th>
+                <th>Location</th>
+                <th>Worth</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dave Gamache</td>
+                <td>Male</td>
+                <td>San Francisco</td>
+                <td>53,762,978.07 USD</td>
+              </tr>
+              <tr>
+                <td>Dwayne Johnson</td>
+                <td>Male</td>
+                <td>Hayward</td>
+                <td>134,046,727.87 USD</td>
+              </tr>
+            </tbody>
+          </table>
+        </aside>
+      </section>
+    </main>
+  <script src="/documentation.5c471a0a.js"></script></body>
+</html>
